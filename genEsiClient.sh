@@ -14,8 +14,3 @@ java -jar $jar generate -i $url -l java -c $cfg -o $out
 # compile to jar
 cd $out
 mvn -Dmaven.javadoc.skip=true package
-
-echo "###############################################################"
-echo "# Be sure to update the libs in src/lib/ with the newest libs #"
-echo "# from the auto-generated project in src/EsiClient/target/lib #"
-echo "###############################################################"
