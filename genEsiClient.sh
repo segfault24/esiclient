@@ -11,7 +11,6 @@ out=EsiClient
 # clean previous build
 cd $base
 rm -rf $out
-rm -rf docs/
 
 # generate source
 java -jar $jar generate -i $url -l java -c $cfg -o $out
@@ -19,6 +18,3 @@ java -jar $jar generate -i $url -l java -c $cfg -o $out
 # compile to jar and generate docs
 cd $out
 mvn package
-cp target/esi-client*.jar $base/release/
-cp -r docs/ $base/
-
