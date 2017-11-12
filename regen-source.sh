@@ -15,6 +15,3 @@ rm -rf $out
 # generate source
 java -jar $jar generate -i $url -l java -c $cfg -o $out
 
-# compile to jar and generate docs
-cd $out
-mvn package
