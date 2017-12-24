@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **locationId** | **Long** | ID of the location where order was placed | 
 **range** | [**RangeEnum**](#RangeEnum) | Valid order range, numbers are ranges in jumps | 
 **isBuyOrder** | **Boolean** | True for a bid (buy) order. False for an offer (sell) order | 
-**price** | **Float** | Cost per unit for this order | 
+**price** | **Double** | Cost per unit for this order | 
 **volumeTotal** | **Integer** | Quantity of items required or offered at time order was placed | 
 **volumeRemain** | **Integer** | Quantity of items still required or offered | 
 **issued** | [**DateTime**](DateTime.md) | Date and time when this order was issued | 
@@ -19,7 +19,7 @@ Name | Type | Description | Notes
 **accountId** | **Integer** | Wallet division for the buyer or seller of this order. Always 1000 for characters. Currently 1000 through 1006 for corporations | 
 **duration** | **Integer** | Numer of days for which order is valid (starting from the issued date). An order expires at time issued + duration | 
 **isCorp** | **Boolean** | is_corp boolean | 
-**escrow** | **Float** | For buy orders, the amount of ISK in escrow | 
+**escrow** | **Double** | For buy orders, the amount of ISK in escrow | 
 
 
 <a name="RangeEnum"></a>

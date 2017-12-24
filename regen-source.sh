@@ -4,7 +4,7 @@ cd `dirname "$0"`
 base=`pwd`
 
 jar=swagger-codegen-cli-2.2.2.jar
-url=https://esi.tech.ccp.is/latest/swagger.json?datasource=tranquility
+url=https://esi.tech.ccp.is/_latest/swagger.json?datasource=tranquility
 cfg=esi.swaggergen.config
 out=EsiClient
 

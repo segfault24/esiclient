@@ -1,11 +1,11 @@
 # SearchApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**getCharactersCharacterIdSearch**](SearchApi.md#getCharactersCharacterIdSearch) | **GET** /characters/{character_id}/search/ | Search on a string
-[**getSearch**](SearchApi.md#getSearch) | **GET** /search/ | Search on a string
+[**getCharactersCharacterIdSearch**](SearchApi.md#getCharactersCharacterIdSearch) | **GET** /v3/characters/{character_id}/search/ | Search on a string
+[**getSearch**](SearchApi.md#getSearch) | **GET** /v2/search/ | Search on a string
 
 
 <a name="getCharactersCharacterIdSearch"></a>
@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 Search on a string
 
-Search for entities that match a given sub-string.  --- Alternate route: &#x60;/v2/characters/{character_id}/search/&#x60;  --- This route is cached for up to 3600 seconds
+Search for entities that match a given sub-string.  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -54,7 +54,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categories** | [**List&lt;String&gt;**](String.md)| Type of entities to search for | [enum: agent, alliance, character, constellation, corporation, faction, inventorytype, region, solarsystem, station, structure, wormhole]
+ **categories** | [**List&lt;String&gt;**](String.md)| Type of entities to search for | [enum: agent, alliance, character, constellation, corporation, faction, inventory_type, region, solar_system, station, structure]
  **characterId** | **Integer**| An EVE character ID |
  **search** | **String**| The string to search on |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 Search on a string
 
-Search for entities that match a given sub-string.  --- Alternate route: &#x60;/v1/search/&#x60;  Alternate route: &#x60;/legacy/search/&#x60;  --- This route is cached for up to 3600 seconds
+Search for entities that match a given sub-string.  ---  This route is cached for up to 3600 seconds
 
 ### Example
 ```java
@@ -113,7 +113,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **categories** | [**List&lt;String&gt;**](String.md)| Type of entities to search for | [enum: agent, alliance, character, constellation, corporation, faction, inventorytype, region, solarsystem, station, wormhole]
+ **categories** | [**List&lt;String&gt;**](String.md)| Type of entities to search for | [enum: agent, alliance, character, constellation, corporation, faction, inventory_type, region, solar_system, station]
  **search** | **String**| The string to search on |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]

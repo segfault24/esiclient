@@ -2,7 +2,7 @@ lazy val root = (project in file(".")).
   settings(
     organization := "io.swagger",
     name := "esi-client",
-    version := "20171106",
+    version := "20171224",
     scalaVersion := "2.11.4",
     scalacOptions ++= Seq("-feature"),
     javacOptions in compile ++= Seq("-Xlint:deprecation"),

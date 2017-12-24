@@ -1,16 +1,16 @@
 # ContactsApi
 
-All URIs are relative to *https://esi.tech.ccp.is/latest*
+All URIs are relative to *https://esi.tech.ccp.is*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteCharactersCharacterIdContacts**](ContactsApi.md#deleteCharactersCharacterIdContacts) | **DELETE** /characters/{character_id}/contacts/ | Delete contacts
-[**getAlliancesAllianceIdContacts**](ContactsApi.md#getAlliancesAllianceIdContacts) | **GET** /alliances/{alliance_id}/contacts/ | Get alliance contacts
-[**getCharactersCharacterIdContacts**](ContactsApi.md#getCharactersCharacterIdContacts) | **GET** /characters/{character_id}/contacts/ | Get contacts
-[**getCharactersCharacterIdContactsLabels**](ContactsApi.md#getCharactersCharacterIdContactsLabels) | **GET** /characters/{character_id}/contacts/labels/ | Get contact labels
-[**getCorporationsCorporationIdContacts**](ContactsApi.md#getCorporationsCorporationIdContacts) | **GET** /corporations/{corporation_id}/contacts/ | Get corporation contacts
-[**postCharactersCharacterIdContacts**](ContactsApi.md#postCharactersCharacterIdContacts) | **POST** /characters/{character_id}/contacts/ | Add contacts
-[**putCharactersCharacterIdContacts**](ContactsApi.md#putCharactersCharacterIdContacts) | **PUT** /characters/{character_id}/contacts/ | Edit contacts
+[**deleteCharactersCharacterIdContacts**](ContactsApi.md#deleteCharactersCharacterIdContacts) | **DELETE** /v2/characters/{character_id}/contacts/ | Delete contacts
+[**getAlliancesAllianceIdContacts**](ContactsApi.md#getAlliancesAllianceIdContacts) | **GET** /v1/alliances/{alliance_id}/contacts/ | Get alliance contacts
+[**getCharactersCharacterIdContacts**](ContactsApi.md#getCharactersCharacterIdContacts) | **GET** /v1/characters/{character_id}/contacts/ | Get contacts
+[**getCharactersCharacterIdContactsLabels**](ContactsApi.md#getCharactersCharacterIdContactsLabels) | **GET** /v1/characters/{character_id}/contacts/labels/ | Get contact labels
+[**getCorporationsCorporationIdContacts**](ContactsApi.md#getCorporationsCorporationIdContacts) | **GET** /v1/corporations/{corporation_id}/contacts/ | Get corporation contacts
+[**postCharactersCharacterIdContacts**](ContactsApi.md#postCharactersCharacterIdContacts) | **POST** /v1/characters/{character_id}/contacts/ | Add contacts
+[**putCharactersCharacterIdContacts**](ContactsApi.md#putCharactersCharacterIdContacts) | **PUT** /v1/characters/{character_id}/contacts/ | Edit contacts
 
 
 <a name="deleteCharactersCharacterIdContacts"></a>
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 Delete contacts
 
-Bulk delete contacts  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60; 
+Bulk delete contacts  --- 
 
 ### Example
 ```java
@@ -38,7 +38,7 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContactsApi apiInstance = new ContactsApi();
 Integer characterId = 56; // Integer | An EVE character ID
-List<Integer> contactIds = Arrays.asList(new List<Integer>()); // List<Integer> | A list of contacts to delete
+List<Integer> contactIds = Arrays.asList(56); // List<Integer> | A list of contacts to delete
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
 String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
@@ -56,7 +56,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
- **contactIds** | **List&lt;Integer&gt;**| A list of contacts to delete |
+ **contactIds** | [**List&lt;Integer&gt;**](Integer.md)| A list of contacts to delete |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
  **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
@@ -81,7 +81,7 @@ null (empty response body)
 
 Get alliance contacts
 
-Return contacts of an alliance  --- Alternate route: &#x60;/v1/alliances/{alliance_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/alliances/{alliance_id}/contacts/&#x60;  Alternate route: &#x60;/dev/alliances/{alliance_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds
+Return contacts of an alliance  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 Get contacts
 
-Return contacts of a character  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds
+Return contacts of a character  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -207,7 +207,7 @@ Name | Type | Description  | Notes
 
 Get contact labels
 
-Return custom labels for contacts the character defined  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/labels/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/labels/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/labels/&#x60;  --- This route is cached for up to 300 seconds
+Return custom labels for contacts the character defined  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 
 Get corporation contacts
 
-Return contacts of a corporation  --- Alternate route: &#x60;/v1/corporations/{corporation_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/corporations/{corporation_id}/contacts/&#x60;  Alternate route: &#x60;/dev/corporations/{corporation_id}/contacts/&#x60;  --- This route is cached for up to 300 seconds
+Return contacts of a corporation  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -331,7 +331,7 @@ Name | Type | Description  | Notes
 
 Add contacts
 
-Bulk add contacts with same settings  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60; 
+Bulk add contacts with same settings  --- 
 
 ### Example
 ```java
@@ -400,7 +400,7 @@ Name | Type | Description  | Notes
 
 Edit contacts
 
-Bulk edit contacts with same settings  --- Alternate route: &#x60;/v1/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/legacy/characters/{character_id}/contacts/&#x60;  Alternate route: &#x60;/dev/characters/{character_id}/contacts/&#x60; 
+Bulk edit contacts with same settings  --- 
 
 ### Example
 ```java
