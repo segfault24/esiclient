@@ -4,13 +4,24 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**isRead** | **Boolean** | is_read boolean |  [optional]
 **notificationId** | **Long** | notification_id integer | 
-**type** | [**TypeEnum**](#TypeEnum) | type string | 
 **senderId** | **Integer** | sender_id integer | 
 **senderType** | [**SenderTypeEnum**](#SenderTypeEnum) | sender_type string | 
-**timestamp** | [**DateTime**](DateTime.md) | timestamp string | 
-**isRead** | **Boolean** | is_read boolean |  [optional]
 **text** | **String** | text string |  [optional]
+**timestamp** | [**DateTime**](DateTime.md) | timestamp string | 
+**type** | [**TypeEnum**](#TypeEnum) | type string | 
+
+
+<a name="SenderTypeEnum"></a>
+## Enum: SenderTypeEnum
+Name | Value
+---- | -----
+CHARACTER | &quot;character&quot;
+CORPORATION | &quot;corporation&quot;
+ALLIANCE | &quot;alliance&quot;
+FACTION | &quot;faction&quot;
+OTHER | &quot;other&quot;
 
 
 <a name="TypeEnum"></a>
@@ -138,6 +149,7 @@ MISSIONTIMEOUTMSG | &quot;MissionTimeoutMsg&quot;
 MOONMININGAUTOMATICFRACTURE | &quot;MoonminingAutomaticFracture&quot;
 MOONMININGEXTRACTIONCANCELLED | &quot;MoonminingExtractionCancelled&quot;
 MOONMININGEXTRACTIONFINISHED | &quot;MoonminingExtractionFinished&quot;
+MOONMININGEXTRACTIONSTARTED | &quot;MoonminingExtractionStarted&quot;
 MOONMININGLASERFIRED | &quot;MoonminingLaserFired&quot;
 NPCSTANDINGSGAINED | &quot;NPCStandingsGained&quot;
 NPCSTANDINGSLOST | &quot;NPCStandingsLost&quot;
@@ -185,6 +197,9 @@ STRUCTUREONLINE | &quot;StructureOnline&quot;
 STRUCTURESERVICESOFFLINE | &quot;StructureServicesOffline&quot;
 STRUCTUREUNANCHORING | &quot;StructureUnanchoring&quot;
 STRUCTUREUNDERATTACK | &quot;StructureUnderAttack&quot;
+STRUCTUREWENTHIGHPOWER | &quot;StructureWentHighPower&quot;
+STRUCTUREWENTLOWPOWER | &quot;StructureWentLowPower&quot;
+STRUCTURESREINFORCEMENTCHANGED | &quot;StructuresReinforcementChanged&quot;
 TOWERALERTMSG | &quot;TowerAlertMsg&quot;
 TOWERRESOURCEALERTMSG | &quot;TowerResourceAlertMsg&quot;
 TRANSACTIONREVERSALMSG | &quot;TransactionReversalMsg&quot;
@@ -192,18 +207,6 @@ TUTORIALMSG | &quot;TutorialMsg&quot;
 WARALLYOFFERDECLINEDMSG | &quot;WarAllyOfferDeclinedMsg&quot;
 WARSURRENDERDECLINEDMSG | &quot;WarSurrenderDeclinedMsg&quot;
 WARSURRENDEROFFERMSG | &quot;WarSurrenderOfferMsg&quot;
-NOTIFICATIONTYPEMOONMININGEXTRACTIONSTARTED | &quot;notificationTypeMoonminingExtractionStarted&quot;
-
-
-<a name="SenderTypeEnum"></a>
-## Enum: SenderTypeEnum
-Name | Value
----- | -----
-CHARACTER | &quot;character&quot;
-CORPORATION | &quot;corporation&quot;
-ALLIANCE | &quot;alliance&quot;
-FACTION | &quot;faction&quot;
-OTHER | &quot;other&quot;
 
 
 

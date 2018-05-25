@@ -4,22 +4,13 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**typeId** | **Integer** | type_id integer | 
-**quantity** | **Integer** | quantity integer | 
-**locationId** | **Long** | location_id integer | 
-**locationType** | [**LocationTypeEnum**](#LocationTypeEnum) | location_type string | 
+**isSingleton** | **Boolean** | is_singleton boolean | 
 **itemId** | **Long** | item_id integer | 
 **locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | location_flag string | 
-**isSingleton** | **Boolean** | is_singleton boolean | 
-
-
-<a name="LocationTypeEnum"></a>
-## Enum: LocationTypeEnum
-Name | Value
----- | -----
-STATION | &quot;station&quot;
-SOLAR_SYSTEM | &quot;solar_system&quot;
-OTHER | &quot;other&quot;
+**locationId** | **Long** | location_id integer | 
+**locationType** | [**LocationTypeEnum**](#LocationTypeEnum) | location_type string | 
+**quantity** | **Integer** | quantity integer | 
+**typeId** | **Integer** | type_id integer | 
 
 
 <a name="LocationFlagEnum"></a>
@@ -63,7 +54,7 @@ HISLOT4 | &quot;HiSlot4&quot;
 HISLOT5 | &quot;HiSlot5&quot;
 HISLOT6 | &quot;HiSlot6&quot;
 HISLOT7 | &quot;HiSlot7&quot;
-HIDDENMODIFERS | &quot;HiddenModifers&quot;
+HIDDENMODIFIERS | &quot;HiddenModifiers&quot;
 IMPLANT | &quot;Implant&quot;
 IMPOUNDED | &quot;Impounded&quot;
 JUNKYARDREPROCESSED | &quot;JunkyardReprocessed&quot;
@@ -129,6 +120,7 @@ STRUCTUREACTIVE | &quot;StructureActive&quot;
 STRUCTUREFUEL | &quot;StructureFuel&quot;
 STRUCTUREINACTIVE | &quot;StructureInactive&quot;
 STRUCTUREOFFLINE | &quot;StructureOffline&quot;
+SUBSYSTEMBAY | &quot;SubSystemBay&quot;
 SUBSYSTEMSLOT0 | &quot;SubSystemSlot0&quot;
 SUBSYSTEMSLOT1 | &quot;SubSystemSlot1&quot;
 SUBSYSTEMSLOT2 | &quot;SubSystemSlot2&quot;
@@ -137,10 +129,18 @@ SUBSYSTEMSLOT4 | &quot;SubSystemSlot4&quot;
 SUBSYSTEMSLOT5 | &quot;SubSystemSlot5&quot;
 SUBSYSTEMSLOT6 | &quot;SubSystemSlot6&quot;
 SUBSYSTEMSLOT7 | &quot;SubSystemSlot7&quot;
-SUBSYSTEMBAY | &quot;SubsystemBay&quot;
 UNLOCKED | &quot;Unlocked&quot;
 WALLET | &quot;Wallet&quot;
 WARDROBE | &quot;Wardrobe&quot;
+
+
+<a name="LocationTypeEnum"></a>
+## Enum: LocationTypeEnum
+Name | Value
+---- | -----
+STATION | &quot;station&quot;
+SOLAR_SYSTEM | &quot;solar_system&quot;
+OTHER | &quot;other&quot;
 
 
 

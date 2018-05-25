@@ -1,13 +1,13 @@
 # CorporationApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCorporationsCorporationId**](CorporationApi.md#getCorporationsCorporationId) | **GET** /v4/corporations/{corporation_id}/ | Get corporation information
 [**getCorporationsCorporationIdAlliancehistory**](CorporationApi.md#getCorporationsCorporationIdAlliancehistory) | **GET** /v2/corporations/{corporation_id}/alliancehistory/ | Get alliance history
-[**getCorporationsCorporationIdBlueprints**](CorporationApi.md#getCorporationsCorporationIdBlueprints) | **GET** /v1/corporations/{corporation_id}/blueprints/ | Get corporation blueprints
-[**getCorporationsCorporationIdContainersLogs**](CorporationApi.md#getCorporationsCorporationIdContainersLogs) | **GET** /v1/corporations/{corporation_id}/containers/logs/ | Get all corporation ALSC logs
+[**getCorporationsCorporationIdBlueprints**](CorporationApi.md#getCorporationsCorporationIdBlueprints) | **GET** /v2/corporations/{corporation_id}/blueprints/ | Get corporation blueprints
+[**getCorporationsCorporationIdContainersLogs**](CorporationApi.md#getCorporationsCorporationIdContainersLogs) | **GET** /v2/corporations/{corporation_id}/containers/logs/ | Get all corporation ALSC logs
 [**getCorporationsCorporationIdDivisions**](CorporationApi.md#getCorporationsCorporationIdDivisions) | **GET** /v1/corporations/{corporation_id}/divisions/ | Get corporation divisions
 [**getCorporationsCorporationIdFacilities**](CorporationApi.md#getCorporationsCorporationIdFacilities) | **GET** /v1/corporations/{corporation_id}/facilities/ | Get corporation facilities
 [**getCorporationsCorporationIdIcons**](CorporationApi.md#getCorporationsCorporationIdIcons) | **GET** /v1/corporations/{corporation_id}/icons/ | Get corporation icon
@@ -21,20 +21,19 @@ Method | HTTP request | Description
 [**getCorporationsCorporationIdOutpostsOutpostId**](CorporationApi.md#getCorporationsCorporationIdOutpostsOutpostId) | **GET** /v1/corporations/{corporation_id}/outposts/{outpost_id}/ | Get corporation outpost details
 [**getCorporationsCorporationIdRoles**](CorporationApi.md#getCorporationsCorporationIdRoles) | **GET** /v1/corporations/{corporation_id}/roles/ | Get corporation member roles
 [**getCorporationsCorporationIdRolesHistory**](CorporationApi.md#getCorporationsCorporationIdRolesHistory) | **GET** /v1/corporations/{corporation_id}/roles/history/ | Get corporation member roles history
-[**getCorporationsCorporationIdShareholders**](CorporationApi.md#getCorporationsCorporationIdShareholders) | **GET** /v1/corporations/{corporation_id}/shareholders/ | Get corporation members
+[**getCorporationsCorporationIdShareholders**](CorporationApi.md#getCorporationsCorporationIdShareholders) | **GET** /v1/corporations/{corporation_id}/shareholders/ | Get corporation shareholders
 [**getCorporationsCorporationIdStandings**](CorporationApi.md#getCorporationsCorporationIdStandings) | **GET** /v1/corporations/{corporation_id}/standings/ | Get corporation standings
 [**getCorporationsCorporationIdStarbases**](CorporationApi.md#getCorporationsCorporationIdStarbases) | **GET** /v1/corporations/{corporation_id}/starbases/ | Get corporation starbases (POSes)
 [**getCorporationsCorporationIdStarbasesStarbaseId**](CorporationApi.md#getCorporationsCorporationIdStarbasesStarbaseId) | **GET** /v1/corporations/{corporation_id}/starbases/{starbase_id}/ | Get starbase (POS) detail
-[**getCorporationsCorporationIdStructures**](CorporationApi.md#getCorporationsCorporationIdStructures) | **GET** /v1/corporations/{corporation_id}/structures/ | Get corporation structures
+[**getCorporationsCorporationIdStructures**](CorporationApi.md#getCorporationsCorporationIdStructures) | **GET** /v2/corporations/{corporation_id}/structures/ | Get corporation structures
 [**getCorporationsCorporationIdTitles**](CorporationApi.md#getCorporationsCorporationIdTitles) | **GET** /v1/corporations/{corporation_id}/titles/ | Get corporation titles
 [**getCorporationsNames**](CorporationApi.md#getCorporationsNames) | **GET** /v2/corporations/names/ | Get corporation names
 [**getCorporationsNpccorps**](CorporationApi.md#getCorporationsNpccorps) | **GET** /v1/corporations/npccorps/ | Get npc corporations
-[**putCorporationsCorporationIdStructuresStructureId**](CorporationApi.md#putCorporationsCorporationIdStructuresStructureId) | **PUT** /v1/corporations/{corporation_id}/structures/{structure_id}/ | Update structure vulnerability schedule
 
 
 <a name="getCorporationsCorporationId"></a>
 # **getCorporationsCorporationId**
-> GetCorporationsCorporationIdOk getCorporationsCorporationId(corporationId, datasource, userAgent, xUserAgent)
+> GetCorporationsCorporationIdOk getCorporationsCorporationId(corporationId, datasource, ifNoneMatch)
 
 Get corporation information
 
@@ -50,10 +49,9 @@ Public information about a corporation  ---  This route is cached for up to 3600
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 try {
-    GetCorporationsCorporationIdOk result = apiInstance.getCorporationsCorporationId(corporationId, datasource, userAgent, xUserAgent);
+    GetCorporationsCorporationIdOk result = apiInstance.getCorporationsCorporationId(corporationId, datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationId");
@@ -67,8 +65,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
@@ -80,12 +77,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdAlliancehistory"></a>
 # **getCorporationsCorporationIdAlliancehistory**
-> List&lt;GetCorporationsCorporationIdAlliancehistory200Ok&gt; getCorporationsCorporationIdAlliancehistory(corporationId, datasource, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdAlliancehistory200Ok&gt; getCorporationsCorporationIdAlliancehistory(corporationId, datasource, ifNoneMatch)
 
 Get alliance history
 
@@ -101,10 +98,9 @@ Get a list of all the alliances a corporation has been a member of  ---  This ro
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 try {
-    List<GetCorporationsCorporationIdAlliancehistory200Ok> result = apiInstance.getCorporationsCorporationIdAlliancehistory(corporationId, datasource, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdAlliancehistory200Ok> result = apiInstance.getCorporationsCorporationIdAlliancehistory(corporationId, datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdAlliancehistory");
@@ -118,8 +114,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
@@ -131,12 +126,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdBlueprints"></a>
 # **getCorporationsCorporationIdBlueprints**
-> List&lt;GetCorporationsCorporationIdBlueprints200Ok&gt; getCorporationsCorporationIdBlueprints(corporationId, datasource, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdBlueprints200Ok&gt; getCorporationsCorporationIdBlueprints(corporationId, datasource, ifNoneMatch, page, token)
 
 Get corporation blueprints
 
@@ -160,12 +155,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdBlueprints200Ok> result = apiInstance.getCorporationsCorporationIdBlueprints(corporationId, datasource, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdBlueprints200Ok> result = apiInstance.getCorporationsCorporationIdBlueprints(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdBlueprints");
@@ -179,10 +173,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -194,12 +187,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdContainersLogs"></a>
 # **getCorporationsCorporationIdContainersLogs**
-> List&lt;GetCorporationsCorporationIdContainersLogs200Ok&gt; getCorporationsCorporationIdContainersLogs(corporationId, datasource, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdContainersLogs200Ok&gt; getCorporationsCorporationIdContainersLogs(corporationId, datasource, ifNoneMatch, page, token)
 
 Get all corporation ALSC logs
 
@@ -223,12 +216,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdContainersLogs200Ok> result = apiInstance.getCorporationsCorporationIdContainersLogs(corporationId, datasource, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdContainersLogs200Ok> result = apiInstance.getCorporationsCorporationIdContainersLogs(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdContainersLogs");
@@ -242,10 +234,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -257,12 +248,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdDivisions"></a>
 # **getCorporationsCorporationIdDivisions**
-> GetCorporationsCorporationIdDivisionsOk getCorporationsCorporationIdDivisions(corporationId, datasource, token, userAgent, xUserAgent)
+> GetCorporationsCorporationIdDivisionsOk getCorporationsCorporationIdDivisions(corporationId, datasource, ifNoneMatch, token)
 
 Get corporation divisions
 
@@ -286,11 +277,10 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCorporationsCorporationIdDivisionsOk result = apiInstance.getCorporationsCorporationIdDivisions(corporationId, datasource, token, userAgent, xUserAgent);
+    GetCorporationsCorporationIdDivisionsOk result = apiInstance.getCorporationsCorporationIdDivisions(corporationId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdDivisions");
@@ -304,9 +294,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -318,12 +307,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdFacilities"></a>
 # **getCorporationsCorporationIdFacilities**
-> List&lt;GetCorporationsCorporationIdFacilities200Ok&gt; getCorporationsCorporationIdFacilities(corporationId, datasource, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdFacilities200Ok&gt; getCorporationsCorporationIdFacilities(corporationId, datasource, ifNoneMatch, token)
 
 Get corporation facilities
 
@@ -347,11 +336,10 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdFacilities200Ok> result = apiInstance.getCorporationsCorporationIdFacilities(corporationId, datasource, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdFacilities200Ok> result = apiInstance.getCorporationsCorporationIdFacilities(corporationId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdFacilities");
@@ -365,9 +353,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -379,12 +366,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdIcons"></a>
 # **getCorporationsCorporationIdIcons**
-> GetCorporationsCorporationIdIconsOk getCorporationsCorporationIdIcons(corporationId, datasource, userAgent, xUserAgent)
+> GetCorporationsCorporationIdIconsOk getCorporationsCorporationIdIcons(corporationId, datasource, ifNoneMatch)
 
 Get corporation icon
 
@@ -400,10 +387,9 @@ Get the icon urls for a corporation  ---  This route is cached for up to 3600 se
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 try {
-    GetCorporationsCorporationIdIconsOk result = apiInstance.getCorporationsCorporationIdIcons(corporationId, datasource, userAgent, xUserAgent);
+    GetCorporationsCorporationIdIconsOk result = apiInstance.getCorporationsCorporationIdIcons(corporationId, datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdIcons");
@@ -417,8 +403,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
@@ -430,12 +415,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdMedals"></a>
 # **getCorporationsCorporationIdMedals**
-> List&lt;GetCorporationsCorporationIdMedals200Ok&gt; getCorporationsCorporationIdMedals(corporationId, datasource, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdMedals200Ok&gt; getCorporationsCorporationIdMedals(corporationId, datasource, ifNoneMatch, page, token)
 
 Get corporation medals
 
@@ -459,12 +444,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdMedals200Ok> result = apiInstance.getCorporationsCorporationIdMedals(corporationId, datasource, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdMedals200Ok> result = apiInstance.getCorporationsCorporationIdMedals(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdMedals");
@@ -478,10 +462,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -493,12 +476,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdMedalsIssued"></a>
 # **getCorporationsCorporationIdMedalsIssued**
-> List&lt;GetCorporationsCorporationIdMedalsIssued200Ok&gt; getCorporationsCorporationIdMedalsIssued(corporationId, datasource, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdMedalsIssued200Ok&gt; getCorporationsCorporationIdMedalsIssued(corporationId, datasource, ifNoneMatch, page, token)
 
 Get corporation issued medals
 
@@ -522,12 +505,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdMedalsIssued200Ok> result = apiInstance.getCorporationsCorporationIdMedalsIssued(corporationId, datasource, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdMedalsIssued200Ok> result = apiInstance.getCorporationsCorporationIdMedalsIssued(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdMedalsIssued");
@@ -541,10 +523,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -556,12 +537,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdMembers"></a>
 # **getCorporationsCorporationIdMembers**
-> List&lt;Integer&gt; getCorporationsCorporationIdMembers(corporationId, datasource, token, userAgent, xUserAgent)
+> List&lt;Integer&gt; getCorporationsCorporationIdMembers(corporationId, datasource, ifNoneMatch, token)
 
 Get corporation members
 
@@ -585,11 +566,10 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getCorporationsCorporationIdMembers(corporationId, datasource, token, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getCorporationsCorporationIdMembers(corporationId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdMembers");
@@ -603,9 +583,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -617,12 +596,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdMembersLimit"></a>
 # **getCorporationsCorporationIdMembersLimit**
-> Integer getCorporationsCorporationIdMembersLimit(corporationId, datasource, token, userAgent, xUserAgent)
+> Integer getCorporationsCorporationIdMembersLimit(corporationId, datasource, ifNoneMatch, token)
 
 Get corporation member limit
 
@@ -646,11 +625,10 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    Integer result = apiInstance.getCorporationsCorporationIdMembersLimit(corporationId, datasource, token, userAgent, xUserAgent);
+    Integer result = apiInstance.getCorporationsCorporationIdMembersLimit(corporationId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdMembersLimit");
@@ -664,9 +642,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -678,12 +655,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdMembersTitles"></a>
 # **getCorporationsCorporationIdMembersTitles**
-> List&lt;GetCorporationsCorporationIdMembersTitles200Ok&gt; getCorporationsCorporationIdMembersTitles(corporationId, datasource, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdMembersTitles200Ok&gt; getCorporationsCorporationIdMembersTitles(corporationId, datasource, ifNoneMatch, token)
 
 Get corporation&#39;s members&#39; titles
 
@@ -707,11 +684,10 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdMembersTitles200Ok> result = apiInstance.getCorporationsCorporationIdMembersTitles(corporationId, datasource, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdMembersTitles200Ok> result = apiInstance.getCorporationsCorporationIdMembersTitles(corporationId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdMembersTitles");
@@ -725,9 +701,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -739,12 +714,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdMembertracking"></a>
 # **getCorporationsCorporationIdMembertracking**
-> List&lt;GetCorporationsCorporationIdMembertracking200Ok&gt; getCorporationsCorporationIdMembertracking(corporationId, datasource, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdMembertracking200Ok&gt; getCorporationsCorporationIdMembertracking(corporationId, datasource, ifNoneMatch, token)
 
 Track corporation members
 
@@ -768,11 +743,10 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdMembertracking200Ok> result = apiInstance.getCorporationsCorporationIdMembertracking(corporationId, datasource, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdMembertracking200Ok> result = apiInstance.getCorporationsCorporationIdMembertracking(corporationId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdMembertracking");
@@ -786,9 +760,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -800,12 +773,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdOutposts"></a>
 # **getCorporationsCorporationIdOutposts**
-> List&lt;Integer&gt; getCorporationsCorporationIdOutposts(corporationId, datasource, page, token, userAgent, xUserAgent)
+> List&lt;Integer&gt; getCorporationsCorporationIdOutposts(corporationId, datasource, ifNoneMatch, page, token)
 
 Get corporation outposts
 
@@ -829,12 +802,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getCorporationsCorporationIdOutposts(corporationId, datasource, page, token, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getCorporationsCorporationIdOutposts(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdOutposts");
@@ -848,10 +820,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -863,12 +834,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdOutpostsOutpostId"></a>
 # **getCorporationsCorporationIdOutpostsOutpostId**
-> GetCorporationsCorporationIdOutpostsOutpostIdOk getCorporationsCorporationIdOutpostsOutpostId(corporationId, outpostId, datasource, token, userAgent, xUserAgent)
+> GetCorporationsCorporationIdOutpostsOutpostIdOk getCorporationsCorporationIdOutpostsOutpostId(corporationId, outpostId, datasource, ifNoneMatch, token)
 
 Get corporation outpost details
 
@@ -893,11 +864,10 @@ CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 Integer outpostId = 56; // Integer | A station (outpost) ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCorporationsCorporationIdOutpostsOutpostIdOk result = apiInstance.getCorporationsCorporationIdOutpostsOutpostId(corporationId, outpostId, datasource, token, userAgent, xUserAgent);
+    GetCorporationsCorporationIdOutpostsOutpostIdOk result = apiInstance.getCorporationsCorporationIdOutpostsOutpostId(corporationId, outpostId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdOutpostsOutpostId");
@@ -912,9 +882,8 @@ Name | Type | Description  | Notes
  **corporationId** | **Integer**| An EVE corporation ID |
  **outpostId** | **Integer**| A station (outpost) ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -926,12 +895,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdRoles"></a>
 # **getCorporationsCorporationIdRoles**
-> List&lt;GetCorporationsCorporationIdRoles200Ok&gt; getCorporationsCorporationIdRoles(corporationId, datasource, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdRoles200Ok&gt; getCorporationsCorporationIdRoles(corporationId, datasource, ifNoneMatch, token)
 
 Get corporation member roles
 
@@ -955,11 +924,10 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdRoles200Ok> result = apiInstance.getCorporationsCorporationIdRoles(corporationId, datasource, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdRoles200Ok> result = apiInstance.getCorporationsCorporationIdRoles(corporationId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdRoles");
@@ -973,9 +941,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -987,12 +954,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdRolesHistory"></a>
 # **getCorporationsCorporationIdRolesHistory**
-> List&lt;GetCorporationsCorporationIdRolesHistory200Ok&gt; getCorporationsCorporationIdRolesHistory(corporationId, datasource, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdRolesHistory200Ok&gt; getCorporationsCorporationIdRolesHistory(corporationId, datasource, ifNoneMatch, page, token)
 
 Get corporation member roles history
 
@@ -1016,12 +983,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdRolesHistory200Ok> result = apiInstance.getCorporationsCorporationIdRolesHistory(corporationId, datasource, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdRolesHistory200Ok> result = apiInstance.getCorporationsCorporationIdRolesHistory(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdRolesHistory");
@@ -1035,10 +1001,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -1050,16 +1015,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdShareholders"></a>
 # **getCorporationsCorporationIdShareholders**
-> List&lt;GetCorporationsCorporationIdShareholders200Ok&gt; getCorporationsCorporationIdShareholders(corporationId, datasource, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdShareholders200Ok&gt; getCorporationsCorporationIdShareholders(corporationId, datasource, ifNoneMatch, page, token)
 
-Get corporation members
+Get corporation shareholders
 
-Return the current member list of a corporation, the token&#39;s character need to be a member of the corporation.  ---  This route is cached for up to 3600 seconds
+Return the current shareholders of a corporation.  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
 
 ### Example
 ```java
@@ -1079,12 +1044,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdShareholders200Ok> result = apiInstance.getCorporationsCorporationIdShareholders(corporationId, datasource, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdShareholders200Ok> result = apiInstance.getCorporationsCorporationIdShareholders(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdShareholders");
@@ -1098,10 +1062,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -1113,12 +1076,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdStandings"></a>
 # **getCorporationsCorporationIdStandings**
-> List&lt;GetCorporationsCorporationIdStandings200Ok&gt; getCorporationsCorporationIdStandings(corporationId, datasource, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdStandings200Ok&gt; getCorporationsCorporationIdStandings(corporationId, datasource, ifNoneMatch, page, token)
 
 Get corporation standings
 
@@ -1142,12 +1105,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdStandings200Ok> result = apiInstance.getCorporationsCorporationIdStandings(corporationId, datasource, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdStandings200Ok> result = apiInstance.getCorporationsCorporationIdStandings(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdStandings");
@@ -1161,10 +1123,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -1176,12 +1137,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdStarbases"></a>
 # **getCorporationsCorporationIdStarbases**
-> List&lt;GetCorporationsCorporationIdStarbases200Ok&gt; getCorporationsCorporationIdStarbases(corporationId, datasource, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdStarbases200Ok&gt; getCorporationsCorporationIdStarbases(corporationId, datasource, ifNoneMatch, page, token)
 
 Get corporation starbases (POSes)
 
@@ -1205,12 +1166,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdStarbases200Ok> result = apiInstance.getCorporationsCorporationIdStarbases(corporationId, datasource, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdStarbases200Ok> result = apiInstance.getCorporationsCorporationIdStarbases(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdStarbases");
@@ -1224,10 +1184,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -1239,12 +1198,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdStarbasesStarbaseId"></a>
 # **getCorporationsCorporationIdStarbasesStarbaseId**
-> GetCorporationsCorporationIdStarbasesStarbaseIdOk getCorporationsCorporationIdStarbasesStarbaseId(corporationId, starbaseId, systemId, datasource, page, token, userAgent, xUserAgent)
+> GetCorporationsCorporationIdStarbasesStarbaseIdOk getCorporationsCorporationIdStarbasesStarbaseId(corporationId, starbaseId, systemId, datasource, ifNoneMatch, token)
 
 Get starbase (POS) detail
 
@@ -1270,12 +1229,10 @@ Integer corporationId = 56; // Integer | An EVE corporation ID
 Long starbaseId = 789L; // Long | An EVE starbase (POS) ID
 Integer systemId = 56; // Integer | The solar system this starbase (POS) is located in,
 String datasource = "tranquility"; // String | The server name you would like data from
-Integer page = 1; // Integer | Which page of results to return
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    GetCorporationsCorporationIdStarbasesStarbaseIdOk result = apiInstance.getCorporationsCorporationIdStarbasesStarbaseId(corporationId, starbaseId, systemId, datasource, page, token, userAgent, xUserAgent);
+    GetCorporationsCorporationIdStarbasesStarbaseIdOk result = apiInstance.getCorporationsCorporationIdStarbasesStarbaseId(corporationId, starbaseId, systemId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdStarbasesStarbaseId");
@@ -1291,10 +1248,8 @@ Name | Type | Description  | Notes
  **starbaseId** | **Long**| An EVE starbase (POS) ID |
  **systemId** | **Integer**| The solar system this starbase (POS) is located in, |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **page** | **Integer**| Which page of results to return | [optional] [default to 1]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -1306,16 +1261,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdStructures"></a>
 # **getCorporationsCorporationIdStructures**
-> List&lt;GetCorporationsCorporationIdStructures200Ok&gt; getCorporationsCorporationIdStructures(corporationId, datasource, language, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdStructures200Ok&gt; getCorporationsCorporationIdStructures(corporationId, acceptLanguage, datasource, ifNoneMatch, language, page, token)
 
 Get corporation structures
 
-Get a list of corporation structures  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): StationManager
+Get a list of corporation structures. This route&#39;s version includes the changes to structures detailed in this blog: https://www.eveonline.com/article/upwell-2.0-structures-changes-coming-on-february-13th  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): StationManager
 
 ### Example
 ```java
@@ -1334,14 +1289,14 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
+String acceptLanguage = "en-us"; // String | Language to use in the response
 String datasource = "tranquility"; // String | The server name you would like data from
-String language = "en-us"; // String | Language to use in the response
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
+String language = "en-us"; // String | Language to use in the response, takes precedence over Accept-Language
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdStructures200Ok> result = apiInstance.getCorporationsCorporationIdStructures(corporationId, datasource, language, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdStructures200Ok> result = apiInstance.getCorporationsCorporationIdStructures(corporationId, acceptLanguage, datasource, ifNoneMatch, language, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdStructures");
@@ -1354,12 +1309,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
+ **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **language** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **language** | **String**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -1371,12 +1326,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdTitles"></a>
 # **getCorporationsCorporationIdTitles**
-> List&lt;GetCorporationsCorporationIdTitles200Ok&gt; getCorporationsCorporationIdTitles(corporationId, datasource, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdTitles200Ok&gt; getCorporationsCorporationIdTitles(corporationId, datasource, ifNoneMatch, token)
 
 Get corporation titles
 
@@ -1400,11 +1355,10 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 CorporationApi apiInstance = new CorporationApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdTitles200Ok> result = apiInstance.getCorporationsCorporationIdTitles(corporationId, datasource, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdTitles200Ok> result = apiInstance.getCorporationsCorporationIdTitles(corporationId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdTitles");
@@ -1418,9 +1372,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -1432,12 +1385,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsNames"></a>
 # **getCorporationsNames**
-> List&lt;GetCorporationsNames200Ok&gt; getCorporationsNames(corporationIds, datasource, userAgent, xUserAgent)
+> List&lt;GetCorporationsNames200Ok&gt; getCorporationsNames(corporationIds, datasource, ifNoneMatch)
 
 Get corporation names
 
@@ -1453,10 +1406,9 @@ Resolve a set of corporation IDs to corporation names  ---  This route is cached
 CorporationApi apiInstance = new CorporationApi();
 List<Integer> corporationIds = Arrays.asList(56); // List<Integer> | A comma separated list of corporation IDs
 String datasource = "tranquility"; // String | The server name you would like data from
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 try {
-    List<GetCorporationsNames200Ok> result = apiInstance.getCorporationsNames(corporationIds, datasource, userAgent, xUserAgent);
+    List<GetCorporationsNames200Ok> result = apiInstance.getCorporationsNames(corporationIds, datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsNames");
@@ -1470,8 +1422,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationIds** | [**List&lt;Integer&gt;**](Integer.md)| A comma separated list of corporation IDs |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
@@ -1483,12 +1434,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsNpccorps"></a>
 # **getCorporationsNpccorps**
-> List&lt;Integer&gt; getCorporationsNpccorps(datasource, userAgent, xUserAgent)
+> List&lt;Integer&gt; getCorporationsNpccorps(datasource, ifNoneMatch)
 
 Get npc corporations
 
@@ -1503,10 +1454,9 @@ Get a list of npc corporations  ---  This route expires daily at 11:05
 
 CorporationApi apiInstance = new CorporationApi();
 String datasource = "tranquility"; // String | The server name you would like data from
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 try {
-    List<Integer> result = apiInstance.getCorporationsNpccorps(datasource, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getCorporationsNpccorps(datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CorporationApi#getCorporationsNpccorps");
@@ -1519,8 +1469,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
@@ -1532,70 +1481,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json
-
-<a name="putCorporationsCorporationIdStructuresStructureId"></a>
-# **putCorporationsCorporationIdStructuresStructureId**
-> putCorporationsCorporationIdStructuresStructureId(corporationId, newSchedule, structureId, datasource, token, userAgent, xUserAgent)
-
-Update structure vulnerability schedule
-
-Update the vulnerability window schedule of a corporation structure  --- 
-
-### Example
-```java
-// Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: evesso
-OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
-evesso.setAccessToken("YOUR ACCESS TOKEN");
-
-CorporationApi apiInstance = new CorporationApi();
-Integer corporationId = 56; // Integer | An EVE corporation ID
-List<PutCorporationsCorporationIdStructuresStructureIdNewSchedule> newSchedule = Arrays.asList(new PutCorporationsCorporationIdStructuresStructureIdNewSchedule()); // List<PutCorporationsCorporationIdStructuresStructureIdNewSchedule> | New vulnerability window schedule for the structure
-Long structureId = 789L; // Long | A structure ID
-String datasource = "tranquility"; // String | The server name you would like data from
-String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
-try {
-    apiInstance.putCorporationsCorporationIdStructuresStructureId(corporationId, newSchedule, structureId, datasource, token, userAgent, xUserAgent);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CorporationApi#putCorporationsCorporationIdStructuresStructureId");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **corporationId** | **Integer**| An EVE corporation ID |
- **newSchedule** | [**List&lt;PutCorporationsCorporationIdStructuresStructureIdNewSchedule&gt;**](PutCorporationsCorporationIdStructuresStructureIdNewSchedule.md)| New vulnerability window schedule for the structure |
- **structureId** | **Long**| A structure ID |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
-
-### Return type
-
-null (empty response body)
-
-### Authorization
-
-[evesso](../README.md#evesso)
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

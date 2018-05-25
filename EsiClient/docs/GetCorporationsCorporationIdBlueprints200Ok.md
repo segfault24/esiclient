@@ -5,13 +5,13 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **itemId** | **Long** | Unique ID for this item. | 
-**typeId** | **Integer** | type_id integer | 
-**locationId** | **Long** | References a solar system, station or item_id if this blueprint is located within a container. | 
 **locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | Type of the location_id | 
-**quantity** | **Integer** | A range of numbers with a minimum of -2 and no maximum value where -1 is an original and -2 is a copy. It can be a positive integer if it is a stack of blueprint originals fresh from the market (e.g. no activities performed on them yet). | 
-**timeEfficiency** | **Integer** | Time Efficiency Level of the blueprint. | 
+**locationId** | **Long** | References a solar system, station or item_id if this blueprint is located within a container. | 
 **materialEfficiency** | **Integer** | Material Efficiency Level of the blueprint. | 
+**quantity** | **Integer** | A range of numbers with a minimum of -2 and no maximum value where -1 is an original and -2 is a copy. It can be a positive integer if it is a stack of blueprint originals fresh from the market (e.g. no activities performed on them yet). | 
 **runs** | **Integer** | Number of runs remaining if the blueprint is a copy, -1 if it is an original. | 
+**timeEfficiency** | **Integer** | Time Efficiency Level of the blueprint. | 
+**typeId** | **Integer** | type_id integer | 
 
 
 <a name="LocationFlagEnum"></a>
@@ -55,7 +55,7 @@ HISLOT4 | &quot;HiSlot4&quot;
 HISLOT5 | &quot;HiSlot5&quot;
 HISLOT6 | &quot;HiSlot6&quot;
 HISLOT7 | &quot;HiSlot7&quot;
-HIDDENMODIFERS | &quot;HiddenModifers&quot;
+HIDDENMODIFIERS | &quot;HiddenModifiers&quot;
 IMPLANT | &quot;Implant&quot;
 IMPOUNDED | &quot;Impounded&quot;
 JUNKYARDREPROCESSED | &quot;JunkyardReprocessed&quot;
@@ -121,6 +121,7 @@ STRUCTUREACTIVE | &quot;StructureActive&quot;
 STRUCTUREFUEL | &quot;StructureFuel&quot;
 STRUCTUREINACTIVE | &quot;StructureInactive&quot;
 STRUCTUREOFFLINE | &quot;StructureOffline&quot;
+SUBSYSTEMBAY | &quot;SubSystemBay&quot;
 SUBSYSTEMSLOT0 | &quot;SubSystemSlot0&quot;
 SUBSYSTEMSLOT1 | &quot;SubSystemSlot1&quot;
 SUBSYSTEMSLOT2 | &quot;SubSystemSlot2&quot;
@@ -129,7 +130,6 @@ SUBSYSTEMSLOT4 | &quot;SubSystemSlot4&quot;
 SUBSYSTEMSLOT5 | &quot;SubSystemSlot5&quot;
 SUBSYSTEMSLOT6 | &quot;SubSystemSlot6&quot;
 SUBSYSTEMSLOT7 | &quot;SubSystemSlot7&quot;
-SUBSYSTEMBAY | &quot;SubsystemBay&quot;
 UNLOCKED | &quot;Unlocked&quot;
 WALLET | &quot;Wallet&quot;
 WARDROBE | &quot;Wardrobe&quot;

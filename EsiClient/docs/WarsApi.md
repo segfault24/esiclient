@@ -1,6 +1,6 @@
 # WarsApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="getWars"></a>
 # **getWars**
-> List&lt;Integer&gt; getWars(datasource, maxWarId, userAgent, xUserAgent)
+> List&lt;Integer&gt; getWars(datasource, ifNoneMatch, maxWarId)
 
 List wars
 
@@ -26,11 +26,10 @@ Return a list of wars  ---  This route is cached for up to 3600 seconds
 
 WarsApi apiInstance = new WarsApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer maxWarId = 56; // Integer | Only return wars with ID smaller than this.
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<Integer> result = apiInstance.getWars(datasource, maxWarId, userAgent, xUserAgent);
+    List<Integer> result = apiInstance.getWars(datasource, ifNoneMatch, maxWarId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WarsApi#getWars");
@@ -43,9 +42,8 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **maxWarId** | **Integer**| Only return wars with ID smaller than this. | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -57,12 +55,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getWarsWarId"></a>
 # **getWarsWarId**
-> GetWarsWarIdOk getWarsWarId(warId, datasource, userAgent, xUserAgent)
+> GetWarsWarIdOk getWarsWarId(warId, datasource, ifNoneMatch)
 
 Get war information
 
@@ -78,10 +76,9 @@ Return details about a war  ---  This route is cached for up to 3600 seconds
 WarsApi apiInstance = new WarsApi();
 Integer warId = 56; // Integer | ID for a war
 String datasource = "tranquility"; // String | The server name you would like data from
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 try {
-    GetWarsWarIdOk result = apiInstance.getWarsWarId(warId, datasource, userAgent, xUserAgent);
+    GetWarsWarIdOk result = apiInstance.getWarsWarId(warId, datasource, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WarsApi#getWarsWarId");
@@ -95,8 +92,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **warId** | **Integer**| ID for a war |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
@@ -108,12 +104,12 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getWarsWarIdKillmails"></a>
 # **getWarsWarIdKillmails**
-> List&lt;GetWarsWarIdKillmails200Ok&gt; getWarsWarIdKillmails(warId, datasource, page, userAgent, xUserAgent)
+> List&lt;GetWarsWarIdKillmails200Ok&gt; getWarsWarIdKillmails(warId, datasource, ifNoneMatch, page)
 
 List kills for a war
 
@@ -129,11 +125,10 @@ Return a list of kills related to a war  ---  This route is cached for up to 360
 WarsApi apiInstance = new WarsApi();
 Integer warId = 56; // Integer | A valid war ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetWarsWarIdKillmails200Ok> result = apiInstance.getWarsWarIdKillmails(warId, datasource, page, userAgent, xUserAgent);
+    List<GetWarsWarIdKillmails200Ok> result = apiInstance.getWarsWarIdKillmails(warId, datasource, ifNoneMatch, page);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling WarsApi#getWarsWarIdKillmails");
@@ -147,9 +142,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **warId** | **Integer**| A valid war ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -161,6 +155,6 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

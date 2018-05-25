@@ -1,21 +1,23 @@
 # ContactsApi
 
-All URIs are relative to *https://esi.tech.ccp.is*
+All URIs are relative to *https://esi.evetech.net*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**deleteCharactersCharacterIdContacts**](ContactsApi.md#deleteCharactersCharacterIdContacts) | **DELETE** /v2/characters/{character_id}/contacts/ | Delete contacts
 [**getAlliancesAllianceIdContacts**](ContactsApi.md#getAlliancesAllianceIdContacts) | **GET** /v1/alliances/{alliance_id}/contacts/ | Get alliance contacts
+[**getAlliancesAllianceIdContactsLabels**](ContactsApi.md#getAlliancesAllianceIdContactsLabels) | **GET** /v1/alliances/{alliance_id}/contacts/labels/ | Get alliance contact labels
 [**getCharactersCharacterIdContacts**](ContactsApi.md#getCharactersCharacterIdContacts) | **GET** /v1/characters/{character_id}/contacts/ | Get contacts
 [**getCharactersCharacterIdContactsLabels**](ContactsApi.md#getCharactersCharacterIdContactsLabels) | **GET** /v1/characters/{character_id}/contacts/labels/ | Get contact labels
 [**getCorporationsCorporationIdContacts**](ContactsApi.md#getCorporationsCorporationIdContacts) | **GET** /v1/corporations/{corporation_id}/contacts/ | Get corporation contacts
+[**getCorporationsCorporationIdContactsLabels**](ContactsApi.md#getCorporationsCorporationIdContactsLabels) | **GET** /v1/corporations/{corporation_id}/contacts/labels/ | Get corporation contact labels
 [**postCharactersCharacterIdContacts**](ContactsApi.md#postCharactersCharacterIdContacts) | **POST** /v1/characters/{character_id}/contacts/ | Add contacts
 [**putCharactersCharacterIdContacts**](ContactsApi.md#putCharactersCharacterIdContacts) | **PUT** /v1/characters/{character_id}/contacts/ | Edit contacts
 
 
 <a name="deleteCharactersCharacterIdContacts"></a>
 # **deleteCharactersCharacterIdContacts**
-> deleteCharactersCharacterIdContacts(characterId, contactIds, datasource, token, userAgent, xUserAgent)
+> deleteCharactersCharacterIdContacts(characterId, contactIds, datasource, token)
 
 Delete contacts
 
@@ -41,10 +43,8 @@ Integer characterId = 56; // Integer | An EVE character ID
 List<Integer> contactIds = Arrays.asList(56); // List<Integer> | A list of contacts to delete
 String datasource = "tranquility"; // String | The server name you would like data from
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.deleteCharactersCharacterIdContacts(characterId, contactIds, datasource, token, userAgent, xUserAgent);
+    apiInstance.deleteCharactersCharacterIdContacts(characterId, contactIds, datasource, token);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactsApi#deleteCharactersCharacterIdContacts");
     e.printStackTrace();
@@ -59,8 +59,6 @@ Name | Type | Description  | Notes
  **contactIds** | [**List&lt;Integer&gt;**](Integer.md)| A list of contacts to delete |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -72,16 +70,16 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getAlliancesAllianceIdContacts"></a>
 # **getAlliancesAllianceIdContacts**
-> List&lt;GetAlliancesAllianceIdContacts200Ok&gt; getAlliancesAllianceIdContacts(allianceId, datasource, page, token, userAgent, xUserAgent)
+> List&lt;GetAlliancesAllianceIdContacts200Ok&gt; getAlliancesAllianceIdContacts(allianceId, datasource, ifNoneMatch, page, token)
 
 Get alliance contacts
 
-Return contacts of an alliance  ---  This route is cached for up to 300 seconds
+Return contacts of an alliance  ---  This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/alliances/{alliance_id}/contacts/)
 
 ### Example
 ```java
@@ -101,12 +99,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 ContactsApi apiInstance = new ContactsApi();
 Integer allianceId = 56; // Integer | An EVE alliance ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetAlliancesAllianceIdContacts200Ok> result = apiInstance.getAlliancesAllianceIdContacts(allianceId, datasource, page, token, userAgent, xUserAgent);
+    List<GetAlliancesAllianceIdContacts200Ok> result = apiInstance.getAlliancesAllianceIdContacts(allianceId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactsApi#getAlliancesAllianceIdContacts");
@@ -120,10 +117,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **allianceId** | **Integer**| An EVE alliance ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -135,16 +131,75 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getAlliancesAllianceIdContactsLabels"></a>
+# **getAlliancesAllianceIdContactsLabels**
+> List&lt;GetAlliancesAllianceIdContactsLabels200Ok&gt; getAlliancesAllianceIdContactsLabels(allianceId, datasource, ifNoneMatch, token)
+
+Get alliance contact labels
+
+Return custom labels for an alliance&#39;s contacts  ---  This route is cached for up to 300 seconds
+
+### Example
+```java
+// Import classes:
+//import is.ccp.tech.ApiClient;
+//import is.ccp.tech.ApiException;
+//import is.ccp.tech.Configuration;
+//import is.ccp.tech.auth.*;
+//import is.ccp.tech.esi.ContactsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: evesso
+OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
+evesso.setAccessToken("YOUR ACCESS TOKEN");
+
+ContactsApi apiInstance = new ContactsApi();
+Integer allianceId = 56; // Integer | An EVE alliance ID
+String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
+String token = "token_example"; // String | Access token to use if unable to set a header
+try {
+    List<GetAlliancesAllianceIdContactsLabels200Ok> result = apiInstance.getAlliancesAllianceIdContactsLabels(allianceId, datasource, ifNoneMatch, token);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ContactsApi#getAlliancesAllianceIdContactsLabels");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **allianceId** | **Integer**| An EVE alliance ID |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
+
+### Return type
+
+[**List&lt;GetAlliancesAllianceIdContactsLabels200Ok&gt;**](GetAlliancesAllianceIdContactsLabels200Ok.md)
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCharactersCharacterIdContacts"></a>
 # **getCharactersCharacterIdContacts**
-> List&lt;GetCharactersCharacterIdContacts200Ok&gt; getCharactersCharacterIdContacts(characterId, datasource, page, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdContacts200Ok&gt; getCharactersCharacterIdContacts(characterId, datasource, ifNoneMatch, page, token)
 
 Get contacts
 
-Return contacts of a character  ---  This route is cached for up to 300 seconds
+Return contacts of a character  ---  This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/contacts/)
 
 ### Example
 ```java
@@ -164,12 +219,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 ContactsApi apiInstance = new ContactsApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdContacts200Ok> result = apiInstance.getCharactersCharacterIdContacts(characterId, datasource, page, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdContacts200Ok> result = apiInstance.getCharactersCharacterIdContacts(characterId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactsApi#getCharactersCharacterIdContacts");
@@ -183,10 +237,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -198,16 +251,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCharactersCharacterIdContactsLabels"></a>
 # **getCharactersCharacterIdContactsLabels**
-> List&lt;GetCharactersCharacterIdContactsLabels200Ok&gt; getCharactersCharacterIdContactsLabels(characterId, datasource, token, userAgent, xUserAgent)
+> List&lt;GetCharactersCharacterIdContactsLabels200Ok&gt; getCharactersCharacterIdContactsLabels(characterId, datasource, ifNoneMatch, token)
 
 Get contact labels
 
-Return custom labels for contacts the character defined  ---  This route is cached for up to 300 seconds
+Return custom labels for a character&#39;s contacts  ---  This route is cached for up to 300 seconds
 
 ### Example
 ```java
@@ -227,11 +280,10 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 ContactsApi apiInstance = new ContactsApi();
 Integer characterId = 56; // Integer | An EVE character ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCharactersCharacterIdContactsLabels200Ok> result = apiInstance.getCharactersCharacterIdContactsLabels(characterId, datasource, token, userAgent, xUserAgent);
+    List<GetCharactersCharacterIdContactsLabels200Ok> result = apiInstance.getCharactersCharacterIdContactsLabels(characterId, datasource, ifNoneMatch, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactsApi#getCharactersCharacterIdContactsLabels");
@@ -245,9 +297,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -259,16 +310,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="getCorporationsCorporationIdContacts"></a>
 # **getCorporationsCorporationIdContacts**
-> List&lt;GetCorporationsCorporationIdContacts200Ok&gt; getCorporationsCorporationIdContacts(corporationId, datasource, page, token, userAgent, xUserAgent)
+> List&lt;GetCorporationsCorporationIdContacts200Ok&gt; getCorporationsCorporationIdContacts(corporationId, datasource, ifNoneMatch, page, token)
 
 Get corporation contacts
 
-Return contacts of a corporation  ---  This route is cached for up to 300 seconds
+Return contacts of a corporation  ---  This route is cached for up to 300 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/contacts/)
 
 ### Example
 ```java
@@ -288,12 +339,11 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 ContactsApi apiInstance = new ContactsApi();
 Integer corporationId = 56; // Integer | An EVE corporation ID
 String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 Integer page = 1; // Integer | Which page of results to return
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    List<GetCorporationsCorporationIdContacts200Ok> result = apiInstance.getCorporationsCorporationIdContacts(corporationId, datasource, page, token, userAgent, xUserAgent);
+    List<GetCorporationsCorporationIdContacts200Ok> result = apiInstance.getCorporationsCorporationIdContacts(corporationId, datasource, ifNoneMatch, page, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactsApi#getCorporationsCorporationIdContacts");
@@ -307,10 +357,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -322,16 +371,75 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+<a name="getCorporationsCorporationIdContactsLabels"></a>
+# **getCorporationsCorporationIdContactsLabels**
+> List&lt;GetCorporationsCorporationIdContactsLabels200Ok&gt; getCorporationsCorporationIdContactsLabels(corporationId, datasource, ifNoneMatch, token)
+
+Get corporation contact labels
+
+Return custom labels for a corporation&#39;s contacts  ---  This route is cached for up to 300 seconds
+
+### Example
+```java
+// Import classes:
+//import is.ccp.tech.ApiClient;
+//import is.ccp.tech.ApiException;
+//import is.ccp.tech.Configuration;
+//import is.ccp.tech.auth.*;
+//import is.ccp.tech.esi.ContactsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: evesso
+OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
+evesso.setAccessToken("YOUR ACCESS TOKEN");
+
+ContactsApi apiInstance = new ContactsApi();
+Integer corporationId = 56; // Integer | An EVE corporation ID
+String datasource = "tranquility"; // String | The server name you would like data from
+String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
+String token = "token_example"; // String | Access token to use if unable to set a header
+try {
+    List<GetCorporationsCorporationIdContactsLabels200Ok> result = apiInstance.getCorporationsCorporationIdContactsLabels(corporationId, datasource, ifNoneMatch, token);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling ContactsApi#getCorporationsCorporationIdContactsLabels");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **corporationId** | **Integer**| An EVE corporation ID |
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
+ **token** | **String**| Access token to use if unable to set a header | [optional]
+
+### Return type
+
+[**List&lt;GetCorporationsCorporationIdContactsLabels200Ok&gt;**](GetCorporationsCorporationIdContactsLabels200Ok.md)
+
+### Authorization
+
+[evesso](../README.md#evesso)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="postCharactersCharacterIdContacts"></a>
 # **postCharactersCharacterIdContacts**
-> List&lt;Integer&gt; postCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelId, token, userAgent, watched, xUserAgent)
+> List&lt;Integer&gt; postCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelId, token, watched)
 
 Add contacts
 
-Bulk add contacts with same settings  --- 
+Bulk add contacts with same settings  ---  Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#POST-/characters/{character_id}/contacts/)
 
 ### Example
 ```java
@@ -350,16 +458,14 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContactsApi apiInstance = new ContactsApi();
 Integer characterId = 56; // Integer | An EVE character ID
-List<Integer> contactIds = Arrays.asList(new List<Integer>()); // List<Integer> | A list of contacts to add
-Float standing = 3.4F; // Float | Standing for the new contact
+List<Integer> contactIds = Arrays.asList(new List<Integer>()); // List<Integer> | A list of contacts
+Float standing = 3.4F; // Float | Standing for the contact
 String datasource = "tranquility"; // String | The server name you would like data from
 Long labelId = 0L; // Long | Add a custom label to the new contact
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
-Boolean watched = false; // Boolean | Whether the new contact should be watched, note this is only effective on characters
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
+Boolean watched = false; // Boolean | Whether the contact should be watched, note this is only effective on characters
 try {
-    List<Integer> result = apiInstance.postCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelId, token, userAgent, watched, xUserAgent);
+    List<Integer> result = apiInstance.postCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelId, token, watched);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactsApi#postCharactersCharacterIdContacts");
@@ -372,14 +478,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
- **contactIds** | **List&lt;Integer&gt;**| A list of contacts to add |
- **standing** | **Float**| Standing for the new contact |
+ **contactIds** | **List&lt;Integer&gt;**| A list of contacts |
+ **standing** | **Float**| Standing for the contact |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **labelId** | **Long**| Add a custom label to the new contact | [optional] [default to 0]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
- **watched** | **Boolean**| Whether the new contact should be watched, note this is only effective on characters | [optional] [default to false]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
+ **watched** | **Boolean**| Whether the contact should be watched, note this is only effective on characters | [optional] [default to false]
 
 ### Return type
 
@@ -391,16 +495,16 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 <a name="putCharactersCharacterIdContacts"></a>
 # **putCharactersCharacterIdContacts**
-> putCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelId, token, userAgent, watched, xUserAgent)
+> putCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelId, token, watched)
 
 Edit contacts
 
-Bulk edit contacts with same settings  --- 
+Bulk edit contacts with same settings  ---  Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#PUT-/characters/{character_id}/contacts/)
 
 ### Example
 ```java
@@ -419,16 +523,14 @@ evesso.setAccessToken("YOUR ACCESS TOKEN");
 
 ContactsApi apiInstance = new ContactsApi();
 Integer characterId = 56; // Integer | An EVE character ID
-List<Integer> contactIds = Arrays.asList(new List<Integer>()); // List<Integer> | A list of contacts to edit
+List<Integer> contactIds = Arrays.asList(new List<Integer>()); // List<Integer> | A list of contacts
 Float standing = 3.4F; // Float | Standing for the contact
 String datasource = "tranquility"; // String | The server name you would like data from
 Long labelId = 0L; // Long | Add a custom label to the contact, use 0 for clearing label
 String token = "token_example"; // String | Access token to use if unable to set a header
-String userAgent = "userAgent_example"; // String | Client identifier, takes precedence over headers
 Boolean watched = false; // Boolean | Whether the contact should be watched, note this is only effective on characters
-String xUserAgent = "xUserAgent_example"; // String | Client identifier, takes precedence over User-Agent
 try {
-    apiInstance.putCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelId, token, userAgent, watched, xUserAgent);
+    apiInstance.putCharactersCharacterIdContacts(characterId, contactIds, standing, datasource, labelId, token, watched);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContactsApi#putCharactersCharacterIdContacts");
     e.printStackTrace();
@@ -440,14 +542,12 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
- **contactIds** | **List&lt;Integer&gt;**| A list of contacts to edit |
+ **contactIds** | **List&lt;Integer&gt;**| A list of contacts |
  **standing** | **Float**| Standing for the contact |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
  **labelId** | **Long**| Add a custom label to the contact, use 0 for clearing label | [optional] [default to 0]
  **token** | **String**| Access token to use if unable to set a header | [optional]
- **userAgent** | **String**| Client identifier, takes precedence over headers | [optional]
  **watched** | **Boolean**| Whether the contact should be watched, note this is only effective on characters | [optional] [default to false]
- **xUserAgent** | **String**| Client identifier, takes precedence over User-Agent | [optional]
 
 ### Return type
 
@@ -459,6 +559,6 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 

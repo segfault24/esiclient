@@ -4,18 +4,34 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**loggedAt** | [**DateTime**](DateTime.md) | Timestamp when this log was created | 
+**action** | [**ActionEnum**](#ActionEnum) | action string | 
+**characterId** | **Integer** | ID of the character who performed the action. | 
 **containerId** | **Long** | ID of the container | 
 **containerTypeId** | **Integer** | Type ID of the container | 
-**characterId** | **Integer** | ID of the character who performed the action. | 
-**locationId** | **Long** | location_id integer | 
 **locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | location_flag string | 
-**action** | [**ActionEnum**](#ActionEnum) | action string | 
-**passwordType** | [**PasswordTypeEnum**](#PasswordTypeEnum) | Type of password set if action is of type SetPassword or EnterPassword |  [optional]
-**typeId** | **Integer** | Type ID of the item being acted upon |  [optional]
-**quantity** | **Integer** | Quantity of the item being acted upon |  [optional]
-**oldConfigBitmask** | **Integer** | old_config_bitmask integer |  [optional]
+**locationId** | **Long** | location_id integer | 
+**loggedAt** | [**DateTime**](DateTime.md) | Timestamp when this log was created | 
 **newConfigBitmask** | **Integer** | new_config_bitmask integer |  [optional]
+**oldConfigBitmask** | **Integer** | old_config_bitmask integer |  [optional]
+**passwordType** | [**PasswordTypeEnum**](#PasswordTypeEnum) | Type of password set if action is of type SetPassword or EnterPassword |  [optional]
+**quantity** | **Integer** | Quantity of the item being acted upon |  [optional]
+**typeId** | **Integer** | Type ID of the item being acted upon |  [optional]
+
+
+<a name="ActionEnum"></a>
+## Enum: ActionEnum
+Name | Value
+---- | -----
+ADD | &quot;add&quot;
+ASSEMBLE | &quot;assemble&quot;
+CONFIGURE | &quot;configure&quot;
+ENTER_PASSWORD | &quot;enter_password&quot;
+LOCK | &quot;lock&quot;
+MOVE | &quot;move&quot;
+REPACKAGE | &quot;repackage&quot;
+SET_NAME | &quot;set_name&quot;
+SET_PASSWORD | &quot;set_password&quot;
+UNLOCK | &quot;unlock&quot;
 
 
 <a name="LocationFlagEnum"></a>
@@ -59,7 +75,7 @@ HISLOT4 | &quot;HiSlot4&quot;
 HISLOT5 | &quot;HiSlot5&quot;
 HISLOT6 | &quot;HiSlot6&quot;
 HISLOT7 | &quot;HiSlot7&quot;
-HIDDENMODIFERS | &quot;HiddenModifers&quot;
+HIDDENMODIFIERS | &quot;HiddenModifiers&quot;
 IMPLANT | &quot;Implant&quot;
 IMPOUNDED | &quot;Impounded&quot;
 JUNKYARDREPROCESSED | &quot;JunkyardReprocessed&quot;
@@ -125,6 +141,7 @@ STRUCTUREACTIVE | &quot;StructureActive&quot;
 STRUCTUREFUEL | &quot;StructureFuel&quot;
 STRUCTUREINACTIVE | &quot;StructureInactive&quot;
 STRUCTUREOFFLINE | &quot;StructureOffline&quot;
+SUBSYSTEMBAY | &quot;SubSystemBay&quot;
 SUBSYSTEMSLOT0 | &quot;SubSystemSlot0&quot;
 SUBSYSTEMSLOT1 | &quot;SubSystemSlot1&quot;
 SUBSYSTEMSLOT2 | &quot;SubSystemSlot2&quot;
@@ -133,26 +150,9 @@ SUBSYSTEMSLOT4 | &quot;SubSystemSlot4&quot;
 SUBSYSTEMSLOT5 | &quot;SubSystemSlot5&quot;
 SUBSYSTEMSLOT6 | &quot;SubSystemSlot6&quot;
 SUBSYSTEMSLOT7 | &quot;SubSystemSlot7&quot;
-SUBSYSTEMBAY | &quot;SubsystemBay&quot;
 UNLOCKED | &quot;Unlocked&quot;
 WALLET | &quot;Wallet&quot;
 WARDROBE | &quot;Wardrobe&quot;
-
-
-<a name="ActionEnum"></a>
-## Enum: ActionEnum
-Name | Value
----- | -----
-ADD | &quot;add&quot;
-ASSEMBLE | &quot;assemble&quot;
-CONFIGURE | &quot;configure&quot;
-ENTER_PASSWORD | &quot;enter_password&quot;
-LOCK | &quot;lock&quot;
-MOVE | &quot;move&quot;
-REPACKAGE | &quot;repackage&quot;
-SET_NAME | &quot;set_name&quot;
-SET_PASSWORD | &quot;set_password&quot;
-UNLOCK | &quot;unlock&quot;
 
 
 <a name="PasswordTypeEnum"></a>
