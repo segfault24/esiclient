@@ -20,11 +20,11 @@ Return attributes of a character  ---  This route is cached for up to 3600 secon
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.SkillsApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.SkillsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -79,11 +79,11 @@ List the configured skill queue for the given character  ---  This route is cach
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.SkillsApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.SkillsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -138,11 +138,11 @@ List all trained skills for the given character  ---  This route is cached for u
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.SkillsApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.SkillsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

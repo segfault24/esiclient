@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCharactersCharacterIdOrders**](MarketApi.md#getCharactersCharacterIdOrders) | **GET** /v2/characters/{character_id}/orders/ | List open orders from a character
 [**getCharactersCharacterIdOrdersHistory**](MarketApi.md#getCharactersCharacterIdOrdersHistory) | **GET** /v1/characters/{character_id}/orders/history/ | List historical orders by a character
-[**getCorporationsCorporationIdOrders**](MarketApi.md#getCorporationsCorporationIdOrders) | **GET** /v2/corporations/{corporation_id}/orders/ | List open orders from a corporation
-[**getCorporationsCorporationIdOrdersHistory**](MarketApi.md#getCorporationsCorporationIdOrdersHistory) | **GET** /v1/corporations/{corporation_id}/orders/history/ | List historical orders from a corporation
+[**getCorporationsCorporationIdOrders**](MarketApi.md#getCorporationsCorporationIdOrders) | **GET** /v3/corporations/{corporation_id}/orders/ | List open orders from a corporation
+[**getCorporationsCorporationIdOrdersHistory**](MarketApi.md#getCorporationsCorporationIdOrdersHistory) | **GET** /v2/corporations/{corporation_id}/orders/history/ | List historical orders from a corporation
 [**getMarketsGroups**](MarketApi.md#getMarketsGroups) | **GET** /v1/markets/groups/ | Get item groups
 [**getMarketsGroupsMarketGroupId**](MarketApi.md#getMarketsGroupsMarketGroupId) | **GET** /v1/markets/groups/{market_group_id}/ | Get item group information
 [**getMarketsPrices**](MarketApi.md#getMarketsPrices) | **GET** /v1/markets/prices/ | List market prices
@@ -28,11 +28,11 @@ List open market orders placed by a character  ---  This route is cached for up 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.MarketApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.MarketApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -87,11 +87,11 @@ List cancelled and expired market orders placed by a character up to 90 days in 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.MarketApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.MarketApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -148,11 +148,11 @@ List open market orders placed on behalf of a corporation  ---  This route is ca
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.MarketApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.MarketApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -209,11 +209,11 @@ List cancelled and expired market orders placed on behalf of a corporation up to
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.MarketApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.MarketApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -270,8 +270,8 @@ Get a list of item groups  ---  This route expires daily at 11:05
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.MarketApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.MarketApi;
 
 
 MarketApi apiInstance = new MarketApi();
@@ -317,8 +317,8 @@ Get information on an item group  ---  This route expires daily at 11:05
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.MarketApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.MarketApi;
 
 
 MarketApi apiInstance = new MarketApi();
@@ -370,8 +370,8 @@ Return a list of prices  ---  This route is cached for up to 3600 seconds
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.MarketApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.MarketApi;
 
 
 MarketApi apiInstance = new MarketApi();
@@ -417,8 +417,8 @@ Return a list of historical market statistics for the specified type in a region
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.MarketApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.MarketApi;
 
 
 MarketApi apiInstance = new MarketApi();
@@ -468,8 +468,8 @@ Return a list of orders in a region  ---  This route is cached for up to 300 sec
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.MarketApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.MarketApi;
 
 
 MarketApi apiInstance = new MarketApi();
@@ -523,8 +523,8 @@ Return a list of type IDs that have active orders in the region, for efficient m
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.MarketApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.MarketApi;
 
 
 MarketApi apiInstance = new MarketApi();
@@ -574,11 +574,11 @@ Return all orders in a structure  ---  This route is cached for up to 300 second
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.MarketApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.MarketApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

@@ -5,8 +5,8 @@
   <artifactId>esi-client</artifactId>
   <packaging>jar</packaging>
   <name>esi-client</name>
-  <version>20180525</version>
-  <url>https://esi.tech.ccp.is/latest/</url>
+  <version>20180804</version>
+  <url>https://esi.evetech.net/latest/</url>
   <description>Auto-generated ESI Client for Java</description>
   <scm>
     <connection>scm:git:git@github.com:swagger-api/swagger-codegen.git</connection>

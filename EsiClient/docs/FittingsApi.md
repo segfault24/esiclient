@@ -20,11 +20,11 @@ Delete a fitting from a character  ---
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.FittingsApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.FittingsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -78,11 +78,11 @@ Return fittings of a character  ---  This route is cached for up to 300 seconds
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.FittingsApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.FittingsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -137,11 +137,11 @@ Save a new fitting for a character  ---
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.FittingsApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.FittingsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

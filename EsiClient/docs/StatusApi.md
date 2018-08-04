@@ -18,8 +18,8 @@ EVE Server status  ---  This route is cached for up to 30 seconds
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.StatusApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.StatusApi;
 
 
 StatusApi apiInstance = new StatusApi();

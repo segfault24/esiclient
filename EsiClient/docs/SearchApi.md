@@ -19,11 +19,11 @@ Search for entities that match a given sub-string.  ---  This route is cached fo
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.SearchApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.SearchApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -88,8 +88,8 @@ Search for entities that match a given sub-string.  ---  This route is cached fo
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.SearchApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.SearchApi;
 
 
 SearchApi apiInstance = new SearchApi();

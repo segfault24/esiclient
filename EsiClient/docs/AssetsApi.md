@@ -23,11 +23,11 @@ Return a list of the characters assets  ---  This route is cached for up to 3600
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.AssetsApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.AssetsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -84,11 +84,11 @@ Return a list of the corporation assets  ---  This route is cached for up to 360
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.AssetsApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.AssetsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -145,11 +145,11 @@ Return locations for a set of item ids, which you can get from character assets 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.AssetsApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.AssetsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -204,11 +204,11 @@ Return names for a set of item ids, which you can get from character assets endp
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.AssetsApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.AssetsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -263,11 +263,11 @@ Return locations for a set of item ids, which you can get from corporation asset
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.AssetsApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.AssetsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -322,11 +322,11 @@ Return names for a set of item ids, which you can get from corporation assets en
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.AssetsApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.AssetsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

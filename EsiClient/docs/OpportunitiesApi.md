@@ -22,11 +22,11 @@ Return a list of tasks finished by a character  ---  This route is cached for up
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.OpportunitiesApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.OpportunitiesApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -81,8 +81,8 @@ Return a list of opportunities groups  ---  This route expires daily at 11:05
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.OpportunitiesApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.OpportunitiesApi;
 
 
 OpportunitiesApi apiInstance = new OpportunitiesApi();
@@ -128,8 +128,8 @@ Return information of an opportunities group  ---  This route expires daily at 1
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.OpportunitiesApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.OpportunitiesApi;
 
 
 OpportunitiesApi apiInstance = new OpportunitiesApi();
@@ -181,8 +181,8 @@ Return a list of opportunities tasks  ---  This route expires daily at 11:05
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.OpportunitiesApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.OpportunitiesApi;
 
 
 OpportunitiesApi apiInstance = new OpportunitiesApi();
@@ -228,8 +228,8 @@ Return information of an opportunities task  ---  This route expires daily at 11
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.OpportunitiesApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.OpportunitiesApi;
 
 
 OpportunitiesApi apiInstance = new OpportunitiesApi();

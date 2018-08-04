@@ -19,11 +19,11 @@ Return a list of loyalty points for all corporations the character has worked fo
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.LoyaltyApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.LoyaltyApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -78,8 +78,8 @@ Return a list of offers from a specific corporation&#39;s loyalty store  ---  Th
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.LoyaltyApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.LoyaltyApi;
 
 
 LoyaltyApi apiInstance = new LoyaltyApi();

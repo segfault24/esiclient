@@ -20,8 +20,8 @@ Shows sovereignty data for campaigns.  ---  This route is cached for up to 5 sec
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.SovereigntyApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.SovereigntyApi;
 
 
 SovereigntyApi apiInstance = new SovereigntyApi();
@@ -67,8 +67,8 @@ Shows sovereignty information for solar systems  ---  This route is cached for u
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.SovereigntyApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.SovereigntyApi;
 
 
 SovereigntyApi apiInstance = new SovereigntyApi();
@@ -114,8 +114,8 @@ Shows sovereignty data for structures.  ---  This route is cached for up to 120 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.SovereigntyApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.SovereigntyApi;
 
 
 SovereigntyApi apiInstance = new SovereigntyApi();

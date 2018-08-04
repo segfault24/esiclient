@@ -18,8 +18,8 @@ Get the systems between origin and destination  ---  This route is cached for up
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.RoutesApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.RoutesApi;
 
 
 RoutesApi apiInstance = new RoutesApi();

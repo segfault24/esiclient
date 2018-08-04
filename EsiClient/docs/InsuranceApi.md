@@ -18,8 +18,8 @@ Return available insurance levels for all ship types  ---  This route is cached 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.InsuranceApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.InsuranceApi;
 
 
 InsuranceApi apiInstance = new InsuranceApi();

@@ -25,11 +25,11 @@ List industry jobs placed by a character  ---  This route is cached for up to 30
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.IndustryApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.IndustryApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -86,11 +86,11 @@ Paginated record of all mining done by a character for the past 30 days  ---  Th
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.IndustryApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.IndustryApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -147,11 +147,11 @@ Extraction timers for all moon chunks being extracted by refineries belonging to
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.IndustryApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.IndustryApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -208,11 +208,11 @@ Paginated list of all entities capable of observing and recording mining for a c
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.IndustryApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.IndustryApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -269,11 +269,11 @@ Paginated record of all mining seen by an observer  ---  This route is cached fo
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.IndustryApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.IndustryApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -332,11 +332,11 @@ List industry jobs run by a corporation  ---  This route is cached for up to 300
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.IndustryApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.IndustryApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -395,8 +395,8 @@ Return a list of industry facilities  ---  This route is cached for up to 3600 s
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.IndustryApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.IndustryApi;
 
 
 IndustryApi apiInstance = new IndustryApi();
@@ -442,8 +442,8 @@ Return cost indices for solar systems  ---  This route is cached for up to 3600 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.IndustryApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.IndustryApi;
 
 
 IndustryApi apiInstance = new IndustryApi();

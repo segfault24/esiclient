@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**getFwLeaderboardsCharacters**](FactionWarfareApi.md#getFwLeaderboardsCharacters) | **GET** /v1/fw/leaderboards/characters/ | List of the top pilots in faction warfare
 [**getFwLeaderboardsCorporations**](FactionWarfareApi.md#getFwLeaderboardsCorporations) | **GET** /v1/fw/leaderboards/corporations/ | List of the top corporations in faction warfare
 [**getFwStats**](FactionWarfareApi.md#getFwStats) | **GET** /v1/fw/stats/ | An overview of statistics about factions involved in faction warfare
-[**getFwSystems**](FactionWarfareApi.md#getFwSystems) | **GET** /v1/fw/systems/ | Ownership of faction warfare systems
+[**getFwSystems**](FactionWarfareApi.md#getFwSystems) | **GET** /v2/fw/systems/ | Ownership of faction warfare systems
 [**getFwWars**](FactionWarfareApi.md#getFwWars) | **GET** /v1/fw/wars/ | Data about which NPC factions are at war
 
 
@@ -25,11 +25,11 @@ Statistical overview of a character involved in faction warfare  ---  This route
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.FactionWarfareApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.FactionWarfareApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -84,11 +84,11 @@ Statistics about a corporation involved in faction warfare  ---  This route expi
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.FactionWarfareApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.FactionWarfareApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -143,8 +143,8 @@ Top 4 leaderboard of factions for kills and victory points separated by total, l
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.FactionWarfareApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.FactionWarfareApi;
 
 
 FactionWarfareApi apiInstance = new FactionWarfareApi();
@@ -190,8 +190,8 @@ Top 100 leaderboard of pilots for kills and victory points separated by total, l
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.FactionWarfareApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.FactionWarfareApi;
 
 
 FactionWarfareApi apiInstance = new FactionWarfareApi();
@@ -237,8 +237,8 @@ Top 10 leaderboard of corporations for kills and victory points separated by tot
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.FactionWarfareApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.FactionWarfareApi;
 
 
 FactionWarfareApi apiInstance = new FactionWarfareApi();
@@ -284,8 +284,8 @@ Statistical overviews of factions involved in faction warfare  ---  This route e
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.FactionWarfareApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.FactionWarfareApi;
 
 
 FactionWarfareApi apiInstance = new FactionWarfareApi();
@@ -326,13 +326,13 @@ No authorization required
 
 Ownership of faction warfare systems
 
-An overview of the current ownership of faction warfare solar systems  ---  This route is cached for up to 1800 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/fw/systems/)
+An overview of the current ownership of faction warfare solar systems  ---  This route is cached for up to 1800 seconds
 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.FactionWarfareApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.FactionWarfareApi;
 
 
 FactionWarfareApi apiInstance = new FactionWarfareApi();
@@ -378,8 +378,8 @@ Data about which NPC factions are at war  ---  This route expires daily at 11:05
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.FactionWarfareApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.FactionWarfareApi;
 
 
 FactionWarfareApi apiInstance = new FactionWarfareApi();

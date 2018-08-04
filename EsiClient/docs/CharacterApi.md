@@ -17,7 +17,6 @@ Method | HTTP request | Description
 [**getCharactersCharacterIdStandings**](CharacterApi.md#getCharactersCharacterIdStandings) | **GET** /v1/characters/{character_id}/standings/ | Get standings
 [**getCharactersCharacterIdStats**](CharacterApi.md#getCharactersCharacterIdStats) | **GET** /v2/characters/{character_id}/stats/ | Yearly aggregate stats
 [**getCharactersCharacterIdTitles**](CharacterApi.md#getCharactersCharacterIdTitles) | **GET** /v1/characters/{character_id}/titles/ | Get character corporation titles
-[**getCharactersNames**](CharacterApi.md#getCharactersNames) | **GET** /v1/characters/names/ | Get character names
 [**postCharactersAffiliation**](CharacterApi.md#postCharactersAffiliation) | **POST** /v1/characters/affiliation/ | Character affiliation
 [**postCharactersCharacterIdCspa**](CharacterApi.md#postCharactersCharacterIdCspa) | **POST** /v4/characters/{character_id}/cspa/ | Calculate a CSPA charge cost
 
@@ -33,8 +32,8 @@ Public information about a character  ---  This route is cached for up to 3600 s
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.CharacterApi;
 
 
 CharacterApi apiInstance = new CharacterApi();
@@ -82,11 +81,11 @@ Return a list of agents research information for a character. The formula for fi
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CharacterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -141,11 +140,11 @@ Return a list of blueprints the character owns  ---  This route is cached for up
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CharacterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -202,8 +201,8 @@ Get a list of all the corporations a character has been a member of  ---  This r
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.CharacterApi;
 
 
 CharacterApi apiInstance = new CharacterApi();
@@ -251,11 +250,11 @@ Return a character&#39;s jump activation and fatigue information  ---  This rout
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CharacterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -310,11 +309,11 @@ Return a list of medals the character has  ---  This route is cached for up to 3
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CharacterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -364,16 +363,16 @@ Name | Type | Description  | Notes
 
 Get character notifications
 
-Return character notifications  ---  This route is cached for up to 600 seconds
+Return character notifications  ---  This route is cached for up to 600 seconds  --- Warning: This route has an upgrade available.  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/notifications/)
 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CharacterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -428,11 +427,11 @@ Return notifications about having been added to someone&#39;s contact list  --- 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CharacterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -487,8 +486,8 @@ Get portrait urls for a character  ---  This route is cached for up to 3600 seco
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.CharacterApi;
 
 
 CharacterApi apiInstance = new CharacterApi();
@@ -536,11 +535,11 @@ Returns a character&#39;s corporation roles  ---  This route is cached for up to
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CharacterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -595,11 +594,11 @@ Return character standings from agents, NPC corporations, and factions  ---  Thi
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CharacterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -654,11 +653,11 @@ Returns aggregate yearly stats for a character  ---  This route is cached for up
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CharacterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -713,11 +712,11 @@ Returns a character&#39;s titles  ---  This route is cached for up to 3600 secon
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CharacterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -761,58 +760,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getCharactersNames"></a>
-# **getCharactersNames**
-> List&lt;GetCharactersNames200Ok&gt; getCharactersNames(characterIds, datasource, ifNoneMatch)
-
-Get character names
-
-Resolve a set of character IDs to character names  ---  This route is cached for up to 3600 seconds
-
-### Example
-```java
-// Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.CharacterApi;
-
-
-CharacterApi apiInstance = new CharacterApi();
-List<Long> characterIds = Arrays.asList(56L); // List<Long> | A comma separated list of character IDs
-String datasource = "tranquility"; // String | The server name you would like data from
-String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-try {
-    List<GetCharactersNames200Ok> result = apiInstance.getCharactersNames(characterIds, datasource, ifNoneMatch);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CharacterApi#getCharactersNames");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **characterIds** | [**List&lt;Long&gt;**](Long.md)| A comma separated list of character IDs |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
-
-### Return type
-
-[**List&lt;GetCharactersNames200Ok&gt;**](GetCharactersNames200Ok.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
 <a name="postCharactersAffiliation"></a>
 # **postCharactersAffiliation**
-> List&lt;PostCharactersAffiliation200Ok&gt; postCharactersAffiliation(characters, datasource, ifNoneMatch)
+> List&lt;PostCharactersAffiliation200Ok&gt; postCharactersAffiliation(characters, datasource)
 
 Character affiliation
 
@@ -821,16 +771,15 @@ Bulk lookup of character IDs to corporation, alliance and faction  ---  This rou
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.CharacterApi;
 
 
 CharacterApi apiInstance = new CharacterApi();
 List<Integer> characters = Arrays.asList(new List<Integer>()); // List<Integer> | The character IDs to fetch affiliations for. All characters must exist, or none will be returned.
 String datasource = "tranquility"; // String | The server name you would like data from
-String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 try {
-    List<PostCharactersAffiliation200Ok> result = apiInstance.postCharactersAffiliation(characters, datasource, ifNoneMatch);
+    List<PostCharactersAffiliation200Ok> result = apiInstance.postCharactersAffiliation(characters, datasource);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CharacterApi#postCharactersAffiliation");
@@ -844,7 +793,6 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characters** | **List&lt;Integer&gt;**| The character IDs to fetch affiliations for. All characters must exist, or none will be returned. |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
 
@@ -870,11 +818,11 @@ Takes a source character ID in the url and a set of target character ID&#39;s in
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CharacterApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CharacterApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 

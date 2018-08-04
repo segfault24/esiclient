@@ -18,8 +18,8 @@ Return a list of current incursions  ---  This route is cached for up to 300 sec
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.IncursionsApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.IncursionsApi;
 
 
 IncursionsApi apiInstance = new IncursionsApi();

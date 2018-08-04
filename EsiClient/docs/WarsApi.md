@@ -20,8 +20,8 @@ Return a list of wars  ---  This route is cached for up to 3600 seconds
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.WarsApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.WarsApi;
 
 
 WarsApi apiInstance = new WarsApi();
@@ -69,8 +69,8 @@ Return details about a war  ---  This route is cached for up to 3600 seconds
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.WarsApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.WarsApi;
 
 
 WarsApi apiInstance = new WarsApi();
@@ -118,8 +118,8 @@ Return a list of kills related to a war  ---  This route is cached for up to 360
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.WarsApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.WarsApi;
 
 
 WarsApi apiInstance = new WarsApi();

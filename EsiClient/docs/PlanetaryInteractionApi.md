@@ -21,11 +21,11 @@ Returns a list of all planetary colonies owned by a character.  ---  This route 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.PlanetaryInteractionApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.PlanetaryInteractionApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -80,11 +80,11 @@ Returns full details on the layout of a single planetary colony, including links
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.PlanetaryInteractionApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.PlanetaryInteractionApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -141,11 +141,11 @@ List customs offices owned by a corporation  ---  This route is cached for up to
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.PlanetaryInteractionApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.PlanetaryInteractionApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -202,8 +202,8 @@ Get information on a planetary factory schematic  ---  This route is cached for 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.PlanetaryInteractionApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.PlanetaryInteractionApi;
 
 
 PlanetaryInteractionApi apiInstance = new PlanetaryInteractionApi();

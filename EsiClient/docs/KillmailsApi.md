@@ -20,11 +20,11 @@ Return a list of a character&#39;s kills and losses going back 90 days  ---  Thi
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.KillmailsApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.KillmailsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -81,11 +81,11 @@ Get a list of a corporation&#39;s kills and losses going back 90 days  ---  This
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.KillmailsApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.KillmailsApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -142,8 +142,8 @@ Return a single killmail from its ID and hash  ---  This route is cached for up 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.KillmailsApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.KillmailsApi;
 
 
 KillmailsApi apiInstance = new KillmailsApi();

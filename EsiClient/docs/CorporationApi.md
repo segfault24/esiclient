@@ -17,8 +17,6 @@ Method | HTTP request | Description
 [**getCorporationsCorporationIdMembersLimit**](CorporationApi.md#getCorporationsCorporationIdMembersLimit) | **GET** /v1/corporations/{corporation_id}/members/limit/ | Get corporation member limit
 [**getCorporationsCorporationIdMembersTitles**](CorporationApi.md#getCorporationsCorporationIdMembersTitles) | **GET** /v1/corporations/{corporation_id}/members/titles/ | Get corporation&#39;s members&#39; titles
 [**getCorporationsCorporationIdMembertracking**](CorporationApi.md#getCorporationsCorporationIdMembertracking) | **GET** /v1/corporations/{corporation_id}/membertracking/ | Track corporation members
-[**getCorporationsCorporationIdOutposts**](CorporationApi.md#getCorporationsCorporationIdOutposts) | **GET** /v1/corporations/{corporation_id}/outposts/ | Get corporation outposts
-[**getCorporationsCorporationIdOutpostsOutpostId**](CorporationApi.md#getCorporationsCorporationIdOutpostsOutpostId) | **GET** /v1/corporations/{corporation_id}/outposts/{outpost_id}/ | Get corporation outpost details
 [**getCorporationsCorporationIdRoles**](CorporationApi.md#getCorporationsCorporationIdRoles) | **GET** /v1/corporations/{corporation_id}/roles/ | Get corporation member roles
 [**getCorporationsCorporationIdRolesHistory**](CorporationApi.md#getCorporationsCorporationIdRolesHistory) | **GET** /v1/corporations/{corporation_id}/roles/history/ | Get corporation member roles history
 [**getCorporationsCorporationIdShareholders**](CorporationApi.md#getCorporationsCorporationIdShareholders) | **GET** /v1/corporations/{corporation_id}/shareholders/ | Get corporation shareholders
@@ -27,7 +25,6 @@ Method | HTTP request | Description
 [**getCorporationsCorporationIdStarbasesStarbaseId**](CorporationApi.md#getCorporationsCorporationIdStarbasesStarbaseId) | **GET** /v1/corporations/{corporation_id}/starbases/{starbase_id}/ | Get starbase (POS) detail
 [**getCorporationsCorporationIdStructures**](CorporationApi.md#getCorporationsCorporationIdStructures) | **GET** /v2/corporations/{corporation_id}/structures/ | Get corporation structures
 [**getCorporationsCorporationIdTitles**](CorporationApi.md#getCorporationsCorporationIdTitles) | **GET** /v1/corporations/{corporation_id}/titles/ | Get corporation titles
-[**getCorporationsNames**](CorporationApi.md#getCorporationsNames) | **GET** /v2/corporations/names/ | Get corporation names
 [**getCorporationsNpccorps**](CorporationApi.md#getCorporationsNpccorps) | **GET** /v1/corporations/npccorps/ | Get npc corporations
 
 
@@ -42,8 +39,8 @@ Public information about a corporation  ---  This route is cached for up to 3600
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.CorporationApi;
 
 
 CorporationApi apiInstance = new CorporationApi();
@@ -91,8 +88,8 @@ Get a list of all the alliances a corporation has been a member of  ---  This ro
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.CorporationApi;
 
 
 CorporationApi apiInstance = new CorporationApi();
@@ -140,11 +137,11 @@ Returns a list of blueprints the corporation owns  ---  This route is cached for
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -201,11 +198,11 @@ Returns logs recorded in the past seven days from all audit log secure container
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -262,11 +259,11 @@ Return corporation hangar and wallet division names, only show if a division is 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -321,11 +318,11 @@ Return a corporation&#39;s facilities  ---  This route is cached for up to 3600 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -380,8 +377,8 @@ Get the icon urls for a corporation  ---  This route is cached for up to 3600 se
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.CorporationApi;
 
 
 CorporationApi apiInstance = new CorporationApi();
@@ -429,11 +426,11 @@ Returns a corporation&#39;s medals  ---  This route is cached for up to 3600 sec
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -490,11 +487,11 @@ Returns medals issued by a corporation  ---  This route is cached for up to 3600
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -551,11 +548,11 @@ Return the current member list of a corporation, the token&#39;s character need 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -610,11 +607,11 @@ Return a corporation&#39;s member limit, not including CEO himself  ---  This ro
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -669,11 +666,11 @@ Returns a corporation&#39;s members&#39; titles  ---  This route is cached for u
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -728,11 +725,11 @@ Returns additional information about a corporation&#39;s members which helps tra
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -776,128 +773,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getCorporationsCorporationIdOutposts"></a>
-# **getCorporationsCorporationIdOutposts**
-> List&lt;Integer&gt; getCorporationsCorporationIdOutposts(corporationId, datasource, ifNoneMatch, page, token)
-
-Get corporation outposts
-
-Get a list of corporation outpost IDs Note: This endpoint will be removed once outposts are migrated to Citadels as talked about in this blog: https://community.eveonline.com/news/dev-blogs/the-next-steps-in-structure-transition/  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
-
-### Example
-```java
-// Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: evesso
-OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
-evesso.setAccessToken("YOUR ACCESS TOKEN");
-
-CorporationApi apiInstance = new CorporationApi();
-Integer corporationId = 56; // Integer | An EVE corporation ID
-String datasource = "tranquility"; // String | The server name you would like data from
-String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-Integer page = 1; // Integer | Which page of results to return
-String token = "token_example"; // String | Access token to use if unable to set a header
-try {
-    List<Integer> result = apiInstance.getCorporationsCorporationIdOutposts(corporationId, datasource, ifNoneMatch, page, token);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdOutposts");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **corporationId** | **Integer**| An EVE corporation ID |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **page** | **Integer**| Which page of results to return | [optional] [default to 1]
- **token** | **String**| Access token to use if unable to set a header | [optional]
-
-### Return type
-
-**List&lt;Integer&gt;**
-
-### Authorization
-
-[evesso](../README.md#evesso)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
-<a name="getCorporationsCorporationIdOutpostsOutpostId"></a>
-# **getCorporationsCorporationIdOutpostsOutpostId**
-> GetCorporationsCorporationIdOutpostsOutpostIdOk getCorporationsCorporationIdOutpostsOutpostId(corporationId, outpostId, datasource, ifNoneMatch, token)
-
-Get corporation outpost details
-
-Get details about a given outpost. Note: This endpoint will be removed once outposts are migrated to Citadels as talked about in this blog: https://community.eveonline.com/news/dev-blogs/the-next-steps-in-structure-transition/  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
-
-### Example
-```java
-// Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
-
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: evesso
-OAuth evesso = (OAuth) defaultClient.getAuthentication("evesso");
-evesso.setAccessToken("YOUR ACCESS TOKEN");
-
-CorporationApi apiInstance = new CorporationApi();
-Integer corporationId = 56; // Integer | An EVE corporation ID
-Integer outpostId = 56; // Integer | A station (outpost) ID
-String datasource = "tranquility"; // String | The server name you would like data from
-String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-String token = "token_example"; // String | Access token to use if unable to set a header
-try {
-    GetCorporationsCorporationIdOutpostsOutpostIdOk result = apiInstance.getCorporationsCorporationIdOutpostsOutpostId(corporationId, outpostId, datasource, ifNoneMatch, token);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CorporationApi#getCorporationsCorporationIdOutpostsOutpostId");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **corporationId** | **Integer**| An EVE corporation ID |
- **outpostId** | **Integer**| A station (outpost) ID |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **token** | **String**| Access token to use if unable to set a header | [optional]
-
-### Return type
-
-[**GetCorporationsCorporationIdOutpostsOutpostIdOk**](GetCorporationsCorporationIdOutpostsOutpostIdOk.md)
-
-### Authorization
-
-[evesso](../README.md#evesso)
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
 <a name="getCorporationsCorporationIdRoles"></a>
 # **getCorporationsCorporationIdRoles**
 > List&lt;GetCorporationsCorporationIdRoles200Ok&gt; getCorporationsCorporationIdRoles(corporationId, datasource, ifNoneMatch, token)
@@ -909,11 +784,11 @@ Return the roles of all members if the character has the personnel manager role 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -968,11 +843,11 @@ Return how roles have changed for a coporation&#39;s members, up to a month  ---
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1029,11 +904,11 @@ Return the current shareholders of a corporation.  ---  This route is cached for
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1090,11 +965,11 @@ Return corporation standings from agents, NPC corporations, and factions  ---  T
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1151,11 +1026,11 @@ Returns list of corporation starbases (POSes)  ---  This route is cached for up 
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1212,11 +1087,11 @@ Returns various settings and fuels of a starbase (POS)  ---  This route is cache
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1275,11 +1150,11 @@ Get a list of corporation structures. This route&#39;s version includes the chan
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1340,11 +1215,11 @@ Returns a corporation&#39;s titles  ---  This route is cached for up to 3600 sec
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiClient;
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.Configuration;
-//import is.ccp.tech.auth.*;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiClient;
+//import net.evetech.ApiException;
+//import net.evetech.Configuration;
+//import net.evetech.auth.*;
+//import net.evetech.esi.CorporationApi;
 
 ApiClient defaultClient = Configuration.getDefaultApiClient();
 
@@ -1388,55 +1263,6 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/json
  - **Accept**: application/json
 
-<a name="getCorporationsNames"></a>
-# **getCorporationsNames**
-> List&lt;GetCorporationsNames200Ok&gt; getCorporationsNames(corporationIds, datasource, ifNoneMatch)
-
-Get corporation names
-
-Resolve a set of corporation IDs to corporation names  ---  This route is cached for up to 3600 seconds
-
-### Example
-```java
-// Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.CorporationApi;
-
-
-CorporationApi apiInstance = new CorporationApi();
-List<Integer> corporationIds = Arrays.asList(56); // List<Integer> | A comma separated list of corporation IDs
-String datasource = "tranquility"; // String | The server name you would like data from
-String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
-try {
-    List<GetCorporationsNames200Ok> result = apiInstance.getCorporationsNames(corporationIds, datasource, ifNoneMatch);
-    System.out.println(result);
-} catch (ApiException e) {
-    System.err.println("Exception when calling CorporationApi#getCorporationsNames");
-    e.printStackTrace();
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **corporationIds** | [**List&lt;Integer&gt;**](Integer.md)| A comma separated list of corporation IDs |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
- **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
-
-### Return type
-
-[**List&lt;GetCorporationsNames200Ok&gt;**](GetCorporationsNames200Ok.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: application/json
- - **Accept**: application/json
-
 <a name="getCorporationsNpccorps"></a>
 # **getCorporationsNpccorps**
 > List&lt;Integer&gt; getCorporationsNpccorps(datasource, ifNoneMatch)
@@ -1448,8 +1274,8 @@ Get a list of npc corporations  ---  This route expires daily at 11:05
 ### Example
 ```java
 // Import classes:
-//import is.ccp.tech.ApiException;
-//import is.ccp.tech.esi.CorporationApi;
+//import net.evetech.ApiException;
+//import net.evetech.esi.CorporationApi;
 
 
 CorporationApi apiInstance = new CorporationApi();
