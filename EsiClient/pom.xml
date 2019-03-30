@@ -5,7 +5,7 @@
   <artifactId>esi-client</artifactId>
   <packaging>jar</packaging>
   <name>esi-client</name>
-  <version>20180804</version>
+  <version>20190330</version>
   <url>https://esi.evetech.net/latest/</url>
   <description>Auto-generated ESI Client for Java</description>
   <scm>
@@ -119,6 +119,9 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-javadoc-plugin</artifactId>
         <version>2.10.4</version>
+        <configuration>
+          <additionalparam>-Xdoclint:none</additionalparam>
+        </configuration>
         <executions>
           <execution>
             <id>attach-javadocs</id>

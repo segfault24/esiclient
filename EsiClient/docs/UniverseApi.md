@@ -33,7 +33,7 @@ Method | HTTP request | Description
 [**getUniverseTypes**](UniverseApi.md#getUniverseTypes) | **GET** /v1/universe/types/ | Get types
 [**getUniverseTypesTypeId**](UniverseApi.md#getUniverseTypesTypeId) | **GET** /v3/universe/types/{type_id}/ | Get type information
 [**postUniverseIds**](UniverseApi.md#postUniverseIds) | **POST** /v1/universe/ids/ | Bulk names to IDs
-[**postUniverseNames**](UniverseApi.md#postUniverseNames) | **POST** /v2/universe/names/ | Get names and categories for a set of ID&#39;s
+[**postUniverseNames**](UniverseApi.md#postUniverseNames) | **POST** /v3/universe/names/ | Get names and categories for a set of IDs
 
 
 <a name="getUniverseAncestries"></a>
@@ -1034,7 +1034,7 @@ No authorization required
 
 <a name="getUniverseStructures"></a>
 # **getUniverseStructures**
-> List&lt;Long&gt; getUniverseStructures(datasource, ifNoneMatch)
+> List&lt;Long&gt; getUniverseStructures(datasource, filter, ifNoneMatch)
 
 List all public structures
 
@@ -1049,9 +1049,10 @@ List all public structures  ---  This route is cached for up to 3600 seconds
 
 UniverseApi apiInstance = new UniverseApi();
 String datasource = "tranquility"; // String | The server name you would like data from
+String filter = "filter_example"; // String | Only list public structures that have this service online
 String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 try {
-    List<Long> result = apiInstance.getUniverseStructures(datasource, ifNoneMatch);
+    List<Long> result = apiInstance.getUniverseStructures(datasource, filter, ifNoneMatch);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling UniverseApi#getUniverseStructures");
@@ -1064,6 +1065,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **filter** | **String**| Only list public structures that have this service online | [optional] [enum: market, manufacturing_basic]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
 ### Return type
@@ -1440,7 +1442,7 @@ No authorization required
 
 Bulk names to IDs
 
-Resolve a set of names to IDs in the following categories: agents, alliances, characters, constellations, corporations factions, inventory_types, regions, stations, and systems. Only exact matches will be returned. All names searched for are cached for 12 hours.  --- 
+Resolve a set of names to IDs in the following categories: agents, alliances, characters, constellations, corporations factions, inventory_types, regions, stations, and systems. Only exact matches will be returned. All names searched for are cached for 12 hours  --- 
 
 ### Example
 ```java
@@ -1489,9 +1491,9 @@ No authorization required
 # **postUniverseNames**
 > List&lt;PostUniverseNames200Ok&gt; postUniverseNames(ids, datasource)
 
-Get names and categories for a set of ID&#39;s
+Get names and categories for a set of IDs
 
-Resolve a set of IDs to names and categories. Supported ID&#39;s for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types.  --- 
+Resolve a set of IDs to names and categories. Supported ID&#39;s for resolving are: Characters, Corporations, Alliances, Stations, Solar Systems, Constellations, Regions, Types, Factions  --- 
 
 ### Example
 ```java
