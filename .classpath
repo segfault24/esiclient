@@ -16,5 +16,5 @@
 	<classpathentry kind="lib" path="/eve-dirt/lib/okhttp-2.7.5.jar"/>
 	<classpathentry kind="lib" path="/eve-dirt/lib/okio-1.6.0.jar"/>
 	<classpathentry kind="lib" path="/eve-dirt/lib/swagger-annotations-1.5.12.jar"/>
-	<classpathentry kind="output" path="target/classes"/>
+	<classpathentry kind="output" path="EsiClient/target/classes"/>
 </classpath>

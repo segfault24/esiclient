@@ -23,7 +23,7 @@ import org.joda.time.DateTime;
  * 200 ok object
  */
 @ApiModel(description = "200 ok object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-30T13:35:06.976-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-18T22:16:15.536-04:00")
 public class GetCharactersCharacterIdWalletJournal200Ok {
   @SerializedName("amount")
   private Double amount = null;
@@ -330,6 +330,9 @@ public class GetCharactersCharacterIdWalletJournal200Ok {
     @SerializedName("insurance")
     INSURANCE("insurance"),
     
+    @SerializedName("item_trader_payment")
+    ITEM_TRADER_PAYMENT("item_trader_payment"),
+    
     @SerializedName("jump_clone_activation_fee")
     JUMP_CLONE_ACTIVATION_FEE("jump_clone_activation_fee"),
     
@@ -434,6 +437,9 @@ public class GetCharactersCharacterIdWalletJournal200Ok {
     
     @SerializedName("shares")
     SHARES("shares"),
+    
+    @SerializedName("skill_purchase")
+    SKILL_PURCHASE("skill_purchase"),
     
     @SerializedName("sovereignity_bill")
     SOVEREIGNITY_BILL("sovereignity_bill"),

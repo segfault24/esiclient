@@ -944,7 +944,7 @@ public class CharacterApi {
 
     /**
      * Get character notifications
-     * Return character notifications  ---  This route is cached for up to 600 seconds
+     * Return character notifications  ---  This route is cached for up to 600 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/notifications/)
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
@@ -959,7 +959,7 @@ public class CharacterApi {
 
     /**
      * Get character notifications
-     * Return character notifications  ---  This route is cached for up to 600 seconds
+     * Return character notifications  ---  This route is cached for up to 600 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/notifications/)
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
@@ -975,7 +975,7 @@ public class CharacterApi {
 
     /**
      * Get character notifications (asynchronously)
-     * Return character notifications  ---  This route is cached for up to 600 seconds
+     * Return character notifications  ---  This route is cached for up to 600 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/notifications/)
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)

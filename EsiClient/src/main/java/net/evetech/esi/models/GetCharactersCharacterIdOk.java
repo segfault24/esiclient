@@ -23,7 +23,7 @@ import org.joda.time.DateTime;
  * 200 ok object
  */
 @ApiModel(description = "200 ok object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-30T13:35:06.976-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-18T22:16:15.536-04:00")
 public class GetCharactersCharacterIdOk {
   @SerializedName("alliance_id")
   private Integer allianceId = null;
@@ -79,6 +79,9 @@ public class GetCharactersCharacterIdOk {
 
   @SerializedName("security_status")
   private Float securityStatus = null;
+
+  @SerializedName("title")
+  private String title = null;
 
   public GetCharactersCharacterIdOk allianceId(Integer allianceId) {
     this.allianceId = allianceId;
@@ -280,6 +283,24 @@ public class GetCharactersCharacterIdOk {
     this.securityStatus = securityStatus;
   }
 
+  public GetCharactersCharacterIdOk title(String title) {
+    this.title = title;
+    return this;
+  }
+
+   /**
+   * The individual title of the character
+   * @return title
+  **/
+  @ApiModelProperty(example = "null", value = "The individual title of the character")
+  public String getTitle() {
+    return title;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -300,12 +321,13 @@ public class GetCharactersCharacterIdOk {
         Objects.equals(this.gender, getCharactersCharacterIdOk.gender) &&
         Objects.equals(this.name, getCharactersCharacterIdOk.name) &&
         Objects.equals(this.raceId, getCharactersCharacterIdOk.raceId) &&
-        Objects.equals(this.securityStatus, getCharactersCharacterIdOk.securityStatus);
+        Objects.equals(this.securityStatus, getCharactersCharacterIdOk.securityStatus) &&
+        Objects.equals(this.title, getCharactersCharacterIdOk.title);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(allianceId, ancestryId, birthday, bloodlineId, corporationId, description, factionId, gender, name, raceId, securityStatus);
+    return Objects.hash(allianceId, ancestryId, birthday, bloodlineId, corporationId, description, factionId, gender, name, raceId, securityStatus, title);
   }
 
 
@@ -325,6 +347,7 @@ public class GetCharactersCharacterIdOk {
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    raceId: ").append(toIndentedString(raceId)).append("\n");
     sb.append("    securityStatus: ").append(toIndentedString(securityStatus)).append("\n");
+    sb.append("    title: ").append(toIndentedString(title)).append("\n");
     sb.append("}");
     return sb.toString();
   }

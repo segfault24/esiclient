@@ -557,7 +557,7 @@ public class FleetsApi {
 
     /**
      * Get character fleet info
-     * Return the fleet ID the character is in, if any.  ---  This route is cached for up to 60 seconds
+     * Return the fleet ID the character is in, if any.  ---  This route is cached for up to 60 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/fleet/)
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
@@ -572,7 +572,7 @@ public class FleetsApi {
 
     /**
      * Get character fleet info
-     * Return the fleet ID the character is in, if any.  ---  This route is cached for up to 60 seconds
+     * Return the fleet ID the character is in, if any.  ---  This route is cached for up to 60 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/fleet/)
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
@@ -588,7 +588,7 @@ public class FleetsApi {
 
     /**
      * Get character fleet info (asynchronously)
-     * Return the fleet ID the character is in, if any.  ---  This route is cached for up to 60 seconds
+     * Return the fleet ID the character is in, if any.  ---  This route is cached for up to 60 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/fleet/)
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)

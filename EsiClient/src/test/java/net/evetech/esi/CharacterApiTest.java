@@ -171,7 +171,7 @@ public class CharacterApiTest {
     /**
      * Get character notifications
      *
-     * Return character notifications  ---  This route is cached for up to 600 seconds
+     * Return character notifications  ---  This route is cached for up to 600 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/notifications/)
      *
      * @throws ApiException
      *          if the Api call fails

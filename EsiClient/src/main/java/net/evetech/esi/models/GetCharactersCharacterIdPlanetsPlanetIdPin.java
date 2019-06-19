@@ -28,7 +28,7 @@ import org.joda.time.DateTime;
  * pin object
  */
 @ApiModel(description = "pin object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-30T13:35:06.976-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-18T22:16:15.536-04:00")
 public class GetCharactersCharacterIdPlanetsPlanetIdPin {
   @SerializedName("contents")
   private List<GetCharactersCharacterIdPlanetsPlanetIdContent> contents = new ArrayList<GetCharactersCharacterIdPlanetsPlanetIdContent>();

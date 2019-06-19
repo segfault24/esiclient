@@ -204,7 +204,7 @@ public class WalletApi {
         Object localVarPostBody = null;
         
         // create path and map variables
-        String localVarPath = "/v5/characters/{character_id}/wallet/journal/".replaceAll("\\{format\\}","json")
+        String localVarPath = "/v6/characters/{character_id}/wallet/journal/".replaceAll("\\{format\\}","json")
         .replaceAll("\\{" + "character_id" + "\\}", apiClient.escapeString(characterId.toString()));
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -269,7 +269,7 @@ public class WalletApi {
 
     /**
      * Get character wallet journal
-     * Retrieve the given character&#39;s wallet journal going 30 days back  ---  This route is cached for up to 3600 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/wallet/journal/)
+     * Retrieve the given character&#39;s wallet journal going 30 days back  ---  This route is cached for up to 3600 seconds
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
@@ -285,7 +285,7 @@ public class WalletApi {
 
     /**
      * Get character wallet journal
-     * Retrieve the given character&#39;s wallet journal going 30 days back  ---  This route is cached for up to 3600 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/wallet/journal/)
+     * Retrieve the given character&#39;s wallet journal going 30 days back  ---  This route is cached for up to 3600 seconds
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)
@@ -302,7 +302,7 @@ public class WalletApi {
 
     /**
      * Get character wallet journal (asynchronously)
-     * Retrieve the given character&#39;s wallet journal going 30 days back  ---  This route is cached for up to 3600 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/wallet/journal/)
+     * Retrieve the given character&#39;s wallet journal going 30 days back  ---  This route is cached for up to 3600 seconds
      * @param characterId An EVE character ID (required)
      * @param datasource The server name you would like data from (optional, default to tranquility)
      * @param ifNoneMatch ETag from a previous request. A 304 will be returned if this matches the current ETag (optional)

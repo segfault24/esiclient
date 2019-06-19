@@ -24,7 +24,7 @@ import java.util.List;
  * 200 ok object
  */
 @ApiModel(description = "200 ok object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-30T13:35:06.976-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-18T22:16:15.536-04:00")
 public class GetMarketsGroupsMarketGroupIdOk {
   @SerializedName("description")
   private String description = null;

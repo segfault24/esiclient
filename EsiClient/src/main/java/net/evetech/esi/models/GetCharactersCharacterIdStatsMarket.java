@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * market object
  */
 @ApiModel(description = "market object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-30T13:35:06.976-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-18T22:16:15.536-04:00")
 public class GetCharactersCharacterIdStatsMarket {
   @SerializedName("accept_contracts_courier")
   private Long acceptContractsCourier = null;

@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * Summary of kills against an enemy faction for the given faction
  */
 @ApiModel(description = "Summary of kills against an enemy faction for the given faction")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-30T13:35:06.976-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-18T22:16:15.536-04:00")
 public class GetFwStatsKills {
   @SerializedName("last_week")
   private Integer lastWeek = null;

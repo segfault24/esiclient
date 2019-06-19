@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * item object
  */
 @ApiModel(description = "item object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-30T13:35:06.976-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-06-18T22:16:15.536-04:00")
 public class PostCharactersCharacterIdFittingsItem {
   /**
    * Fitting location for the item. Entries placed in 'Invalid' will be discarded. If this leaves the fitting with nothing, it will cause an error.
