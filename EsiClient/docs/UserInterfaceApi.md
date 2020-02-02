@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
  **addToBeginning** | **Boolean**| Whether this solar system should be added to the beginning of all waypoints | [default to false]
  **clearOtherWaypoints** | **Boolean**| Whether clean other waypoints beforing adding this one | [default to false]
  **destinationId** | **Long**| The destination to travel to, can be solar system, station or structure&#39;s id |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 
 ### Return type
@@ -111,7 +111,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **contractId** | **Integer**| The contract to open |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 
 ### Return type
@@ -167,7 +167,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **targetId** | **Integer**| The target to open |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 
 ### Return type
@@ -223,7 +223,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **typeId** | **Integer**| The item type to open in market window |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 
 ### Return type
@@ -279,7 +279,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **newMail** | [**PostUiOpenwindowNewmailNewMail**](PostUiOpenwindowNewmailNewMail.md)| The details of mail to create |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 
 ### Return type

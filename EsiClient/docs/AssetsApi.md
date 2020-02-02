@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 Get character assets
 
-Return a list of the characters assets  ---  This route is cached for up to 3600 seconds
+Return a list of the characters assets  ---  This route is cached for up to 3600 seconds  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/assets/)
 
 ### Example
 ```java
@@ -55,7 +55,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
@@ -79,7 +79,7 @@ Name | Type | Description  | Notes
 
 Get corporation assets
 
-Return a list of the corporation assets  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director
+Return a list of the corporation assets  ---  This route is cached for up to 3600 seconds  --- Requires one of the following EVE corporation role(s): Director  --- Warning: This route has an upgrade available  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/assets/)
 
 ### Example
 ```java
@@ -116,7 +116,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **itemIds** | **List&lt;Long&gt;**| A list of item ids |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 
 ### Return type
@@ -236,7 +236,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **characterId** | **Integer**| An EVE character ID |
  **itemIds** | **List&lt;Long&gt;**| A list of item ids |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 
 ### Return type
@@ -295,7 +295,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **itemIds** | **List&lt;Long&gt;**| A list of item ids |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 
 ### Return type
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
  **itemIds** | **List&lt;Long&gt;**| A list of item ids |
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 
 ### Return type

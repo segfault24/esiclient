@@ -47,7 +47,7 @@ Name | Type | Description  | Notes
  **origin** | **Integer**| origin solar system ID |
  **avoid** | [**List&lt;Integer&gt;**](Integer.md)| avoid solar system ID(s) | [optional]
  **connections** | [**List&lt;List&lt;Integer&gt;&gt;**](List&lt;Integer&gt;.md)| connected solar system pairs | [optional]
- **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility, singularity]
+ **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **flag** | **String**| route security preference | [optional] [default to shortest] [enum: shortest, secure, insecure]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
 
