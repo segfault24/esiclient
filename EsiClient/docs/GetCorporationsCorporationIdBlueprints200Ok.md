@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **itemId** | **Long** | Unique ID for this item. | 
 **locationFlag** | [**LocationFlagEnum**](#LocationFlagEnum) | Type of the location_id | 
-**locationId** | **Long** | References a solar system, station or item_id if this blueprint is located within a container. | 
+**locationId** | **Long** | References a station, a ship or an item_id if this blueprint is located within a container. | 
 **materialEfficiency** | **Integer** | Material Efficiency Level of the blueprint. | 
 **quantity** | **Integer** | A range of numbers with a minimum of -2 and no maximum value where -1 is an original and -2 is a copy. It can be a positive integer if it is a stack of blueprint originals fresh from the market (e.g. no activities performed on them yet). | 
 **runs** | **Integer** | Number of runs remaining if the blueprint is a copy, -1 if it is an original. | 
@@ -45,6 +45,7 @@ FIGHTERTUBE2 | &quot;FighterTube2&quot;
 FIGHTERTUBE3 | &quot;FighterTube3&quot;
 FIGHTERTUBE4 | &quot;FighterTube4&quot;
 FLEETHANGAR | &quot;FleetHangar&quot;
+FRIGATEESCAPEBAY | &quot;FrigateEscapeBay&quot;
 HANGAR | &quot;Hangar&quot;
 HANGARALL | &quot;HangarAll&quot;
 HISLOT0 | &quot;HiSlot0&quot;

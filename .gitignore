@@ -1,2 +1,4 @@
 EsiClient/git_push.sh
 /target/
+swagger-codegen-cli-*.jar
+EsiClient/.settings/

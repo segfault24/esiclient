@@ -71,11 +71,11 @@ Name | Type | Description  | Notes
 
 <a name="getCharactersCharacterIdPlanetsPlanetId"></a>
 # **getCharactersCharacterIdPlanetsPlanetId**
-> GetCharactersCharacterIdPlanetsPlanetIdOk getCharactersCharacterIdPlanetsPlanetId(characterId, planetId, datasource, ifNoneMatch, token)
+> GetCharactersCharacterIdPlanetsPlanetIdOk getCharactersCharacterIdPlanetsPlanetId(characterId, planetId, datasource, token)
 
 Get colony layout
 
-Returns full details on the layout of a single planetary colony, including links, pins and routes. Note: Planetary information is only recalculated when the colony is viewed through the client. Information will not update until this criteria is met.  ---  This route is cached for up to 600 seconds
+Returns full details on the layout of a single planetary colony, including links, pins and routes. Note: Planetary information is only recalculated when the colony is viewed through the client. Information will not update until this criteria is met.  --- 
 
 ### Example
 ```java
@@ -96,10 +96,9 @@ PlanetaryInteractionApi apiInstance = new PlanetaryInteractionApi();
 Integer characterId = 56; // Integer | An EVE character ID
 Integer planetId = 56; // Integer | Planet id of the target planet
 String datasource = "tranquility"; // String | The server name you would like data from
-String ifNoneMatch = "ifNoneMatch_example"; // String | ETag from a previous request. A 304 will be returned if this matches the current ETag
 String token = "token_example"; // String | Access token to use if unable to set a header
 try {
-    GetCharactersCharacterIdPlanetsPlanetIdOk result = apiInstance.getCharactersCharacterIdPlanetsPlanetId(characterId, planetId, datasource, ifNoneMatch, token);
+    GetCharactersCharacterIdPlanetsPlanetIdOk result = apiInstance.getCharactersCharacterIdPlanetsPlanetId(characterId, planetId, datasource, token);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling PlanetaryInteractionApi#getCharactersCharacterIdPlanetsPlanetId");
@@ -114,7 +113,6 @@ Name | Type | Description  | Notes
  **characterId** | **Integer**| An EVE character ID |
  **planetId** | **Integer**| Planet id of the target planet |
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
- **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 
 ### Return type

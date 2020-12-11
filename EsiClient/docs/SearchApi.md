@@ -57,10 +57,10 @@ Name | Type | Description  | Notes
  **categories** | [**List&lt;String&gt;**](String.md)| Type of entities to search for | [enum: agent, alliance, character, constellation, corporation, faction, inventory_type, region, solar_system, station, structure]
  **characterId** | **Integer**| An EVE character ID |
  **search** | **String**| The string to search on |
- **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh, ko]
+ **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, ko]
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **language** | **String**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh, ko]
+ **language** | **String**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, ko]
  **strict** | **Boolean**| Whether the search should be a strict match | [optional] [default to false]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 
@@ -115,10 +115,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **categories** | [**List&lt;String&gt;**](String.md)| Type of entities to search for | [enum: agent, alliance, character, constellation, corporation, faction, inventory_type, region, solar_system, station]
  **search** | **String**| The string to search on |
- **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh, ko]
+ **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, ko]
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **language** | **String**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh, ko]
+ **language** | **String**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, ko]
  **strict** | **Boolean**| Whether the search should be a strict match | [optional] [default to false]
 
 ### Return type

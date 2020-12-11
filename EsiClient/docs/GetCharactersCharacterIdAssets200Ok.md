@@ -32,6 +32,7 @@ FIGHTERTUBE2 | &quot;FighterTube2&quot;
 FIGHTERTUBE3 | &quot;FighterTube3&quot;
 FIGHTERTUBE4 | &quot;FighterTube4&quot;
 FLEETHANGAR | &quot;FleetHangar&quot;
+FRIGATEESCAPEBAY | &quot;FrigateEscapeBay&quot;
 HANGAR | &quot;Hangar&quot;
 HANGARALL | &quot;HangarAll&quot;
 HISLOT0 | &quot;HiSlot0&quot;
@@ -105,6 +106,7 @@ Name | Value
 ---- | -----
 STATION | &quot;station&quot;
 SOLAR_SYSTEM | &quot;solar_system&quot;
+ITEM | &quot;item&quot;
 OTHER | &quot;other&quot;
 
 

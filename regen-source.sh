@@ -1,17 +1,32 @@
 #!/bin/sh
 
 cd `dirname "$0"`
-base=`pwd`
 
-jar=swagger-codegen-cli-2.2.2.jar
+codegenver=2.2.2
+jar=swagger-codegen-cli-${codegenver}.jar
 url=https://esi.evetech.net/_latest/swagger.json?datasource=tranquility
 cfg=esi.swaggergen.config
 out=EsiClient
 
-# clean previous build
-cd $base
-rm -rf $out
+# get the jar
+if [[ ! -r ${jar} ]]; then
+  curl https://repo1.maven.org/maven2/io/swagger/swagger-codegen-cli/${codegenver}/${jar} --output ${jar}
+fi
 
 # generate source
 java -jar $jar generate -i $url -l java -c $cfg -o $out
 
+echo ""
+echo "Need to manually add this to the pom.xml:"
+echo "  <dependency>"
+echo "    <groupId>javax.annotation</groupId>"
+echo "    <artifactId>javax.annotation-api</artifactId>"
+echo "    <version>1.3.2</version>"
+echo "  </dependency>"
+echo ""
+echo "Configure maven-javadoc-plugin:"
+echo "  <configuration>"
+echo "    <source>8</source>"
+echo "    <additionalparam>-Xdoclint:none</additionalparam>"
+echo "  </configuration>"
+echo ""

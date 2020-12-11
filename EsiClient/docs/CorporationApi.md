@@ -372,7 +372,7 @@ Name | Type | Description  | Notes
 
 Get corporation icon
 
-Get the icon urls for a corporation  ---  This route is cached for up to 3600 seconds
+Get the icon urls for a corporation  ---  This route is cached for up to 3600 seconds  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/corporations/{corporation_id}/icons/)
 
 ### Example
 ```java
@@ -1184,10 +1184,10 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **corporationId** | **Integer**| An EVE corporation ID |
- **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh, ko]
+ **acceptLanguage** | **String**| Language to use in the response | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, ko]
  **datasource** | **String**| The server name you would like data from | [optional] [default to tranquility] [enum: tranquility]
  **ifNoneMatch** | **String**| ETag from a previous request. A 304 will be returned if this matches the current ETag | [optional]
- **language** | **String**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, zh, ko]
+ **language** | **String**| Language to use in the response, takes precedence over Accept-Language | [optional] [default to en-us] [enum: de, en-us, fr, ja, ru, ko]
  **page** | **Integer**| Which page of results to return | [optional] [default to 1]
  **token** | **String**| Access token to use if unable to set a header | [optional]
 

@@ -109,6 +109,7 @@ DOCKING_FEE | &quot;docking_fee&quot;
 DUEL_WAGER_ESCROW | &quot;duel_wager_escrow&quot;
 DUEL_WAGER_PAYMENT | &quot;duel_wager_payment&quot;
 DUEL_WAGER_REFUND | &quot;duel_wager_refund&quot;
+ESS_ESCROW_TRANSFER | &quot;ess_escrow_transfer&quot;
 FACTORY_SLOT_RENTAL_FEE | &quot;factory_slot_rental_fee&quot;
 GM_CASH_TRANSFER | &quot;gm_cash_transfer&quot;
 INDUSTRY_JOB_TAX | &quot;industry_job_tax&quot;

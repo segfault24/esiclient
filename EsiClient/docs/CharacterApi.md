@@ -766,7 +766,7 @@ Name | Type | Description  | Notes
 
 Character affiliation
 
-Bulk lookup of character IDs to corporation, alliance and faction  ---  This route is cached for up to 3600 seconds
+Bulk lookup of character IDs to corporation, alliance and faction  ---  This route is cached for up to 3600 seconds  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#POST-/characters/affiliation/)
 
 ### Example
 ```java
@@ -813,7 +813,7 @@ No authorization required
 
 Calculate a CSPA charge cost
 
-Takes a source character ID in the url and a set of target character ID&#39;s in the body, returns a CSPA charge cost  --- 
+Takes a source character ID in the url and a set of target character ID&#39;s in the body, returns a CSPA charge cost  ---
 
 ### Example
 ```java

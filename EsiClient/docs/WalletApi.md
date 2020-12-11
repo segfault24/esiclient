@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 Get a character&#39;s wallet balance
 
-Returns a character&#39;s wallet balance  ---  This route is cached for up to 120 seconds
+Returns a character&#39;s wallet balance  ---  This route is cached for up to 120 seconds  --- [Diff of the upcoming changes](https://esi.evetech.net/diff/latest/dev/#GET-/characters/{character_id}/wallet/)
 
 ### Example
 ```java

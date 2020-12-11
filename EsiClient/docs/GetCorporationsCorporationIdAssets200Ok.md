@@ -45,6 +45,7 @@ FIGHTERTUBE2 | &quot;FighterTube2&quot;
 FIGHTERTUBE3 | &quot;FighterTube3&quot;
 FIGHTERTUBE4 | &quot;FighterTube4&quot;
 FLEETHANGAR | &quot;FleetHangar&quot;
+FRIGATEESCAPEBAY | &quot;FrigateEscapeBay&quot;
 HANGAR | &quot;Hangar&quot;
 HANGARALL | &quot;HangarAll&quot;
 HISLOT0 | &quot;HiSlot0&quot;
@@ -81,6 +82,7 @@ OFFICEFOLDER | &quot;OfficeFolder&quot;
 PILOT | &quot;Pilot&quot;
 PLANETSURFACE | &quot;PlanetSurface&quot;
 QUAFEBAY | &quot;QuafeBay&quot;
+QUANTUMCOREROOM | &quot;QuantumCoreRoom&quot;
 REWARD | &quot;Reward&quot;
 RIGSLOT0 | &quot;RigSlot0&quot;
 RIGSLOT1 | &quot;RigSlot1&quot;
@@ -141,6 +143,7 @@ Name | Value
 ---- | -----
 STATION | &quot;station&quot;
 SOLAR_SYSTEM | &quot;solar_system&quot;
+ITEM | &quot;item&quot;
 OTHER | &quot;other&quot;
 
 
