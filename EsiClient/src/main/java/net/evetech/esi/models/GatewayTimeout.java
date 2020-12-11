@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * Gateway timeout model
  */
 @ApiModel(description = "Gateway timeout model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:20:13.441-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
 public class GatewayTimeout {
   @SerializedName("error")
   private String error = null;

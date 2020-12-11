@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * Optional object that is returned if a bookmark was made on a planet or a random location in space.
  */
 @ApiModel(description = "Optional object that is returned if a bookmark was made on a planet or a random location in space.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:20:13.441-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
 public class GetCharactersCharacterIdBookmarksCoordinates {
   @SerializedName("x")
   private Double x = null;

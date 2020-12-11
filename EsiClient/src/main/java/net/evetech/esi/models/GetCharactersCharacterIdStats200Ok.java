@@ -34,7 +34,7 @@ import net.evetech.esi.models.GetCharactersCharacterIdStatsTravel;
  * Aggregate stats for a year
  */
 @ApiModel(description = "Aggregate stats for a year")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:20:13.441-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
 public class GetCharactersCharacterIdStats200Ok {
   @SerializedName("character")
   private GetCharactersCharacterIdStatsCharacter character = null;

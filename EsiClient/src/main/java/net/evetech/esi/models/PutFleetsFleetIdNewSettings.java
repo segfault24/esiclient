@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * new_settings object
  */
 @ApiModel(description = "new_settings object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:20:13.441-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
 public class PutFleetsFleetIdNewSettings {
   @SerializedName("is_free_move")
   private Boolean isFreeMove = null;

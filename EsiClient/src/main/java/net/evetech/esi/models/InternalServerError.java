@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * Internal server error model
  */
 @ApiModel(description = "Internal server error model")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:20:13.441-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
 public class InternalServerError {
   @SerializedName("error")
   private String error = null;

@@ -26,7 +26,7 @@ import net.evetech.esi.models.GetUniverseSystemsSystemIdPosition;
  * 200 ok object
  */
 @ApiModel(description = "200 ok object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:20:13.441-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
 public class GetUniverseSystemsSystemIdOk {
   @SerializedName("constellation_id")
   private Integer constellationId = null;

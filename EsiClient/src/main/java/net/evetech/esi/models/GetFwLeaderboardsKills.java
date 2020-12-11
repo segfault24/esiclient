@@ -27,7 +27,7 @@ import net.evetech.esi.models.GetFwLeaderboardsYesterdayYesterday;
  * Top 4 rankings of factions by number of kills from yesterday, last week and in total
  */
 @ApiModel(description = "Top 4 rankings of factions by number of kills from yesterday, last week and in total")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:20:13.441-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
 public class GetFwLeaderboardsKills {
   @SerializedName("active_total")
   private List<GetFwLeaderboardsActiveTotalActiveTotal> activeTotal = new ArrayList<GetFwLeaderboardsActiveTotalActiveTotal>();

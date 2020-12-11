@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * modifier object
  */
 @ApiModel(description = "modifier object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:20:13.441-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
 public class GetDogmaEffectsEffectIdModifier {
   @SerializedName("domain")
   private String domain = null;
