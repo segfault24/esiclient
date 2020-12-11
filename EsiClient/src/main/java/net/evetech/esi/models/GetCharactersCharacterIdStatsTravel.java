@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * travel object
  */
 @ApiModel(description = "travel object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class GetCharactersCharacterIdStatsTravel {
   @SerializedName("acceleration_gate_activations")
   private Long accelerationGateActivations = null;

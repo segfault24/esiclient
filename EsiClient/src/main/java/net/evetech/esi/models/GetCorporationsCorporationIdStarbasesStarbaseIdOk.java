@@ -25,7 +25,7 @@ import net.evetech.esi.models.GetCorporationsCorporationIdStarbasesStarbaseIdFue
  * 200 ok object
  */
 @ApiModel(description = "200 ok object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class GetCorporationsCorporationIdStarbasesStarbaseIdOk {
   @SerializedName("allow_alliance_members")
   private Boolean allowAllianceMembers = null;

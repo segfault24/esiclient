@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * Optional object that is returned if a bookmark was made on a particular item.
  */
 @ApiModel(description = "Optional object that is returned if a bookmark was made on a particular item.")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class GetCharactersCharacterIdBookmarksItem {
   @SerializedName("item_id")
   private Long itemId = null;

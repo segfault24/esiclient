@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * last_week object
  */
 @ApiModel(description = "last_week object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class GetFwLeaderboardsCharactersLastWeekLastWeek {
   @SerializedName("amount")
   private Integer amount = null;

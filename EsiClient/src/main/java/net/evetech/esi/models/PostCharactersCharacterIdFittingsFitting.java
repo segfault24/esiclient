@@ -25,7 +25,7 @@ import net.evetech.esi.models.PostCharactersCharacterIdFittingsItem;
  * fitting object
  */
 @ApiModel(description = "fitting object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class PostCharactersCharacterIdFittingsFitting {
   @SerializedName("description")
   private String description = null;

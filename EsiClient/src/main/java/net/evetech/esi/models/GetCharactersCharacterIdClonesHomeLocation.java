@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * home_location object
  */
 @ApiModel(description = "home_location object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class GetCharactersCharacterIdClonesHomeLocation {
   @SerializedName("location_id")
   private Long locationId = null;

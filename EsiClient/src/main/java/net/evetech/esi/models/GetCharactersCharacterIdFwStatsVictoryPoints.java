@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * Summary of victory points gained by the given character for the enlisted faction
  */
 @ApiModel(description = "Summary of victory points gained by the given character for the enlisted faction")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class GetCharactersCharacterIdFwStatsVictoryPoints {
   @SerializedName("last_week")
   private Integer lastWeek = null;

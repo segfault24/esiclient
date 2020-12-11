@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * mining object
  */
 @ApiModel(description = "mining object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class GetCharactersCharacterIdStatsMining {
   @SerializedName("drone_mine")
   private Long droneMine = null;

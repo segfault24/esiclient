@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * The defending corporation or alliance that declared this war, only contains either corporation_id or alliance_id
  */
 @ApiModel(description = "The defending corporation or alliance that declared this war, only contains either corporation_id or alliance_id")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class GetWarsWarIdDefender {
   @SerializedName("alliance_id")
   private Integer allianceId = null;

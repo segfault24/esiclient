@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * position object
  */
 @ApiModel(description = "position object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class GetUniverseMoonsMoonIdPosition {
   @SerializedName("x")
   private Double x = null;

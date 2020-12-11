@@ -24,7 +24,7 @@ import java.util.List;
  * jump_clone object
  */
 @ApiModel(description = "jump_clone object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class GetCharactersCharacterIdClonesJumpClone {
   @SerializedName("implants")
   private List<Integer> implants = new ArrayList<Integer>();

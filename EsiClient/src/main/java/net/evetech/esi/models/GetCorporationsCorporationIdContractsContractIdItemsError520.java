@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * Error 520
  */
 @ApiModel(description = "Error 520")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class GetCorporationsCorporationIdContractsContractIdItemsError520 {
   @SerializedName("error")
   private String error = null;

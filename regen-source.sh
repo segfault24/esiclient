@@ -14,6 +14,7 @@ if [[ ! -r ${jar} ]]; then
 fi
 
 # generate source
+rm -rf $out
 java -jar $jar generate -i $url -l java -c $cfg -o $out
 
 echo ""

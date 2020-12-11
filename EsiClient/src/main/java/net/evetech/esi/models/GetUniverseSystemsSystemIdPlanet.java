@@ -24,7 +24,7 @@ import java.util.List;
  * planet object
  */
 @ApiModel(description = "planet object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class GetUniverseSystemsSystemIdPlanet {
   @SerializedName("asteroid_belts")
   private List<Integer> asteroidBelts = new ArrayList<Integer>();

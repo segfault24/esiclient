@@ -5,7 +5,7 @@
   <artifactId>esi-client</artifactId>
   <packaging>jar</packaging>
   <name>esi-client</name>
-  <version>20200201</version>
+  <version>1.0.0</version>
   <url>https://esi.evetech.net/latest/</url>
   <description>Auto-generated ESI Client for Java</description>
   <scm>

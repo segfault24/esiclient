@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * Coordinates of the victim in Cartesian space relative to the Sun 
  */
 @ApiModel(description = "Coordinates of the victim in Cartesian space relative to the Sun ")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class GetKillmailsKillmailIdKillmailHashPosition {
   @SerializedName("x")
   private Double x = null;

@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiModelProperty;
  * social object
  */
 @ApiModel(description = "social object")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:37:36.420-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2020-12-11T14:41:27.859-05:00")
 public class GetCharactersCharacterIdStatsSocial {
   @SerializedName("add_contact_bad")
   private Long addContactBad = null;
